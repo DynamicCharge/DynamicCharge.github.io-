@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Project Name - описание">
+  <!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
+  <!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
+  <!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="favicon/site.webmanifest" rel="manifest" crossorigin="use-credentials">
+<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
+<link href="favicon/favicon.ico" rel="shortcut icon">
+<meta content="#ffffff" name="msapplication-TileColor">
+<meta content="favicon/browserconfig.xml" name="msapplication-config">
+<meta content="#ffffff" name="theme-color">
+ -->
+  <!-- используйте только для шрифта находящегося на первом экране -->
+  <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d7f796e6-b982-4f3a-9dae-e214d0513617&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src=" https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js "></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Бархатный сезон — Информация для туристов</title>
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="alert" viewBox="0 0 21 74">
+        <path d="M0 64.9451C0 59.8453 4.7341 55.8903 10.5607 55.8903C16.3873 55.8903 21 59.8453 21 64.9451C21 69.9409 16.3873 74 10.5607 74C4.7341 74 0 69.9409 0 64.9451ZM17.1156 48.6048H3.88439L0.121387 0H21L17.1156 48.6048Z" fill="white" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+      </symbol>
+      <symbol id="minus" viewBox="0 0 23 6">
+        <path d="M23 6H0V0H23V6Z" fill="#E35800" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 23 23">
+        <path d="M14.3693 23H8.58546V14.3694H0V8.67583H8.58546V0H14.3693V8.67583H23V14.3694H14.3693V23Z" fill="currentColor" />
+      </symbol>
+    </svg>
+  </div>
+  <div class="wrapper">
+    <header class="header ">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="" class="header__logo">
+            <img src="./img/svg/logo.svg" alt="">
+            <img src="./img/svg/logo-mob.svg" alt="" class="_mob">
+          </a>
+          <div class="header__wrap">
+            <a href="" class="header__reestr">
+              <img src="./img/svg/gerb.svg" alt="">
+              <span class="header__info-text page-text-18">Наша компания <br> в Росреестре</span>
+            </a>
+            <div class="header__info">
+              <span class="header__info-text page-text-18">€ = 100.71₽</span>
+              <span class="header__info-text page-text-18">$ = 93.99₽</span>
+            </div>
+            <div class="header__info">
+              <a href="tel:+79653867672" class="header__info-text page-text-18">+7 (965) 386 76 72</a>
+              <span class="header__info-text page-text-18">г. Москва, Кулаков пер., д. 9, стр. 1</span>
+            </div>
+          </div>
+          <div class="header__mobile">
+            <a href="" class="header__mobile-callback">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1264 25.9963C17.2512 25.9273 11.9369 25.193 6.37134 19.6298C0.807029 14.0654 0.0738895 8.75348 0.00357063 6.8774C-0.100605 4.01835 2.0897 1.24132 4.61987 0.15681C4.92456 0.0252718 5.25821 -0.0248089 5.5881 0.0114825C5.91799 0.0477739 6.23277 0.16919 6.50155 0.363818C8.58508 1.88187 10.0227 4.17849 11.2572 5.98427C11.5288 6.38101 11.6449 6.86379 11.5835 7.34062C11.522 7.81745 11.2872 8.25501 10.9238 8.56991L8.38324 10.4564C8.26049 10.545 8.17409 10.6752 8.14008 10.8227C8.10608 10.9702 8.12677 11.125 8.19832 11.2584C8.7739 12.3039 9.79743 13.861 10.9694 15.0327C12.1427 16.2045 13.773 17.2955 14.8916 17.936C15.0319 18.0147 15.197 18.0367 15.353 17.9975C15.5089 17.9583 15.644 17.8608 15.7303 17.7251L17.3841 15.2085C17.6881 14.8047 18.1366 14.5342 18.6357 14.4536C19.1348 14.373 19.6457 14.4886 20.0614 14.7762C21.8936 16.0443 24.0318 17.4569 25.597 19.4606C25.8075 19.7313 25.9414 20.0535 25.9847 20.3936C26.028 20.7337 25.9791 21.0792 25.8431 21.394C24.7532 23.9366 21.9951 26.1018 19.1264 25.9963Z" fill="#F9F5E9" />
+              </svg>
+            </a>
+            <div class="header__mobile-menu page-text-20 --bold --white-color" data-menu>
+              <span>Меню</span>
+              <svg width="65" height="40" viewBox="0 0 65 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="65" height="40" rx="10" fill="#F9F5E9" />
+                <rect x="0.5" y="0.5" width="64" height="39" rx="9.5" stroke="#F9F5E9" />
+                <rect x="25.8286" y="10.0295" width="24" height="4" transform="rotate(45 25.8286 10.0295)" fill="#E35800" />
+                <rect x="23" y="27" width="24" height="4" transform="rotate(-45 23 27)" fill="#E35800" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="page-body">
+          <div class="sidebar">
+            <div class="sidebar__wrapper">
+              <nav class="sidebar__nav">
+                <ul class="sidebar__main-list">
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">О нас</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Путешествия и события</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Проекты</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Контакты</a></li>
+                </ul>
+                <ul class="sidebar__list">
+                  <li class="sidebar__item page-text-22"><a href="">Информация для туристов</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Вопрос-ответ</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Подарочный сертификат</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Журнал</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Отзывы</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Галерея</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Магазин</a></li>
+                  <div class="sidebar__socials">
+                    <a href="" class="sidebar__social"><img src="./img/svg/inst.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/youtube.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/tg.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/dzen.svg" alt=""></a>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="content">
+            <div class="breadcrumbs" style="margin-bottom: 60px;">
+              <div class="breadcrumbs__wrapper">
+                <a href="" class="breadcrumbs__item page-text-18">Главная</a>
+                <span class="breadcrumbs__item page-text-18">Информация для туристов</span>
+              </div>
+            </div>
+            <section class="for-tourists journal">
+              <div class="for-tourists__wrapper">
+                <h1 class="for-tourists__header page-h2 --orange-color">ИНФОРМАЦИЯ ДЛЯ ТУРИСТОВ</h1>
+                <p class="for-tourists__desc page-text-18">
+                  Здесь мы публикуем новости для тех людей, кто готовится к путешествию с нами. Вся актуальная информация по турам будет появляться на этой страничке за несколько дней до начала тура.
+                </p>
+                <div class="for-tourists__items">
+                  <div class="journal__item">
+                    <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                    <div class="journal__desc --white-bg">
+                      <span class="journal__name page-text-30 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                      <p class="journal__text page-text-18">
+                        Уважаемые друзья, <br>
+                        Группа "Бархатного сезона", отправляющаяся на экскурсию в Сандуны, встречается 14 ноября, вторник, в 16:15 на выходе из метро «Трубная» Выход № 2, у схемы, рядом с киоском с напитками. См. фото <br>
+                        Вас будет ожидать сопровождающий Калистратова Ольга с табличкой "Бархатный сезон", телефон для связи + 7 903 542 81 38...
+                      </p>
+                      <a href="" class="journal__item-link page-btn --bold">Читать информацию</a>
+                    </div>
+                  </div>
+                  <div class="journal__item">
+                    <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                    <div class="journal__desc --white-bg">
+                      <span class="journal__name page-text-30 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                      <p class="journal__text page-text-18">
+                        Уважаемые друзья, <br>
+                        Группа "Бархатного сезона", отправляющаяся на экскурсию в Сандуны, встречается 14 ноября, вторник, в 16:15 на выходе из метро «Трубная» Выход № 2, у схемы, рядом с киоском с напитками. См. фото <br>
+                        Вас будет ожидать сопровождающий Калистратова Ольга с табличкой "Бархатный сезон", телефон для связи + 7 903 542 81 38...
+                      </p>
+                      <a href="" class="journal__item-link page-btn --bold">Читать информацию</a>
+                    </div>
+                  </div>
+                  <div class="journal__item">
+                    <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                    <div class="journal__desc --white-bg">
+                      <span class="journal__name page-text-30 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                      <p class="journal__text page-text-18">
+                        Уважаемые друзья, <br>
+                        Группа "Бархатного сезона", отправляющаяся на экскурсию в Сандуны, встречается 14 ноября, вторник, в 16:15 на выходе из метро «Трубная» Выход № 2, у схемы, рядом с киоском с напитками. См. фото <br>
+                        Вас будет ожидать сопровождающий Калистратова Ольга с табличкой "Бархатный сезон", телефон для связи + 7 903 542 81 38...
+                      </p>
+                      <a href="" class="journal__item-link page-btn --bold">Читать информацию</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="page__nav">
+                  <a href="" class="journal__nav-btn page-nav-btn --prev"><img src="./img/svg/arrow-next.svg" alt=""> Предыдущая страница</a>
+                  <div class="pagination">
+                    <a href="" class="pagination__link page-text-20 --bold --orange-color _active">1</a>
+                    <a href="" class="pagination__link page-text-20 --bold --orange-color">2</a>
+                    <a href="" class="pagination__link page-text-20 --bold --orange-color">3</a>
+                    <a href="" class="pagination__link page-text-20 --bold --orange-color">4</a>
+                    <a href="" class="pagination__link page-text-20 --bold --orange-color">5</a>
+                  </div>
+                  <a href="" class="journal__nav-btn page-nav-btn --next">Следующая страница <img src="./img/svg/arrow-next.svg" alt=""> </a>
+                </div>
+              </div>
+            </section>
+            <section class="subscribe">
+              <div class="subscribe__wrapper">
+                <div class="subscribe__left">
+                  <h3 class="subscribe__header page-text-40">Подпишитесь <br> на рассылку, <br> <span>узнавайте первыми о новых турах и новостях клуба!</span></h3>
+                  <span class="subscribe__mini page-text-20 --bold">Также, подписывайтесь <br> на нас в <a href="" class="page-link --bold">телеграм!</a></span>
+                </div>
+                <div class="subscribe__center">
+                  <img src="./img/content/subscribe-img-1.png" alt="" class="desc">
+                  <img src="./img/content/subscribe-mob.png" alt="" class="mob">
+                </div>
+                <div class="subscribe__right">
+                  <form action="" class="subscribe__form">
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">ФИО*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Электронная почта*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Номер телефона*</span>
+                      <input type="phone" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__terms">
+                      <input type="checkbox" class="subscribe__check">
+                      <div class="subscribe__custom-check"></div>
+                      <span class="subscribe__terms-text">Согласен с правилами предоставления <a href="" class="page-link --bold">персональных данных</a></span>
+                    </label>
+                    <button class="subscribe__submit page-btn --white --bold">Подписаться</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container">
+        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-open-modal="success">modal--success link</a></p>
+      </div> -->
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="" class="footer__logo"><img src="./img/svg/logo.svg" alt=""></a>
+            <div class="footer__left-wrap">
+              <a href="" class="footer__reestr">
+                <img src="./img/svg/gerb.svg" alt="">
+                <span class="page-text-18 --bold">Наша компания в Росреестре</span>
+              </a>
+              <div class="footer__nav">
+                <span class="footer__nav-header page-text-18 --bold">Навигация по сайту</span>
+                <div class="footer__nav-wrap">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">О нас</a></li>
+                    <li class="footer__nav-item"><a href="">Путешествия и события</a></li>
+                    <li class="footer__nav-item"><a href="">Проекты</a></li>
+                    <li class="footer__nav-item"><a href="">Контакты</a></li>
+                  </ul>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">Информация для туристов</a></li>
+                    <li class="footer__nav-item"><a href="">Вопрос-ответ</a></li>
+                    <li class="footer__nav-item"><a href="">Подарочный сертификат</a></li>
+                  </ul>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">Журнал</a></li>
+                    <li class="footer__nav-item"><a href="">Отзывы</a></li>
+                    <li class="footer__nav-item"><a href="">Галерея</a></li>
+                    <li class="footer__nav-item"><a href="">Магазин</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Электронная почта</span>
+              <div class="footer__info-wrap">
+                <a href="mailto:forafarmtravel@mail.ru" class="footer__info-text page-text-18">forafarmtravel@mail.ru</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Номера телефонов</span>
+              <div class="footer__info-wrap">
+                <a href="tel:+74957729977" class="footer__info-text page-text-18">+7 (495) 772-99-77<br>доб. 1345, 1433, 1458, 1354</a>
+                <a href="tel:+79653867672" class="footer__info-text page-text-18">+7 (965) 386-76-72 (многоканальный)</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Адрес:</span>
+              <div class="footer__info-wrap">
+                <span class="footer__info-text page-text-18">129626, г. Москва, Кулаков пер., дом 9, стр. 1</span>
+                <a href="tel:+79653867672" class="footer__info-link page-link --bold">Как нас найти?</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Режим работы</span>
+              <div class="footer__info-wrap">
+                <span class="footer__info-text page-text-18">ПН-ПТ с 11:00 до 18:00</span>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Социальные сети</span>
+              <div class="footer__info-wrap">
+                <div class="footer__socials">
+                  <a href="" class="footer__social"><img src="./img/svg/inst.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/youtube.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/tg.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/dzen.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span class="footer__bottom-text page-text-18">©RA-Studio 2023</span>
+          <div class="footer__bottom-wrap">
+            <a href="" class="footer__bottom-text page-text-18">Публичная оферта</a>
+            <a href="" class="footer__bottom-text page-text-18">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal modal--preload    " data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="mymodal-wrapper">
+            <div class="mymodal__headline">
+              <span class="mymodal__header page-text-25 --bold">Заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.</span>
+              <button class="mymodal__btn page-btn --bold" data-close-modal>Хорошо, всё понятно</button>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload    " data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="mymodal-wrapper">
+            <div class="mymodal__headline">
+              <span class="mymodal__header page-text-25 --bold">Оставьте данные, чтобя встать в лист ожидания. Наш менеджер свяжется с вами в ближайшее время.</span>
+            </div>
+            <form action="" class="mymodal__form">
+              <label class="request__label">
+                <span class="request__label-name page-text-18">ФИО*</span>
+                <input type="text" name="name" class="request__field">
+              </label>
+              <label class="request__label">
+                <span class="request__label-name page-text-18">Номер телефона*</span>
+                <input type="phone" name="phone" class="request__field" inputmode="text">
+              </label>
+              <label class="request__terms">
+                <input type="checkbox" class="request__terms-check">
+                <div class="request__terms-custom">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.19632 10L0 5.25988L1.04908 4.07484L4.19632 7.62994L10.9509 0L12 1.18503L4.19632 10Z" fill="#E35800"></path>
+                  </svg>
+                </div>
+                <span class="request__terms-text page-text-18">
+                  Согласен с правилами предоставления <a href="">персональных данных</a>
+                </span>
+              </label>
+              <div class="mymodal__form-bottom">
+                <button class="mymodal__submit page-btn --bold">Отправить</button>
+              </div>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

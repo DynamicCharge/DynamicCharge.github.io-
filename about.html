@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Project Name - описание">
+  <!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
+  <!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
+  <!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="favicon/site.webmanifest" rel="manifest" crossorigin="use-credentials">
+<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
+<link href="favicon/favicon.ico" rel="shortcut icon">
+<meta content="#ffffff" name="msapplication-TileColor">
+<meta content="favicon/browserconfig.xml" name="msapplication-config">
+<meta content="#ffffff" name="theme-color">
+ -->
+  <!-- используйте только для шрифта находящегося на первом экране -->
+  <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d7f796e6-b982-4f3a-9dae-e214d0513617&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src=" https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js "></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Бархатный сезон — О нас</title>
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="alert" viewBox="0 0 21 74">
+        <path d="M0 64.9451C0 59.8453 4.7341 55.8903 10.5607 55.8903C16.3873 55.8903 21 59.8453 21 64.9451C21 69.9409 16.3873 74 10.5607 74C4.7341 74 0 69.9409 0 64.9451ZM17.1156 48.6048H3.88439L0.121387 0H21L17.1156 48.6048Z" fill="white" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+      </symbol>
+      <symbol id="minus" viewBox="0 0 23 6">
+        <path d="M23 6H0V0H23V6Z" fill="#E35800" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 23 23">
+        <path d="M14.3693 23H8.58546V14.3694H0V8.67583H8.58546V0H14.3693V8.67583H23V14.3694H14.3693V23Z" fill="currentColor" />
+      </symbol>
+    </svg>
+  </div>
+  <div class="wrapper">
+    <header class="header ">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="" class="header__logo">
+            <img src="./img/svg/logo.svg" alt="">
+            <img src="./img/svg/logo-mob.svg" alt="" class="_mob">
+          </a>
+          <div class="header__wrap">
+            <a href="" class="header__reestr">
+              <img src="./img/svg/gerb.svg" alt="">
+              <span class="header__info-text page-text-18">Наша компания <br> в Росреестре</span>
+            </a>
+            <div class="header__info">
+              <span class="header__info-text page-text-18">€ = 100.71₽</span>
+              <span class="header__info-text page-text-18">$ = 93.99₽</span>
+            </div>
+            <div class="header__info">
+              <a href="tel:+79653867672" class="header__info-text page-text-18">+7 (965) 386 76 72</a>
+              <span class="header__info-text page-text-18">г. Москва, Кулаков пер., д. 9, стр. 1</span>
+            </div>
+          </div>
+          <div class="header__mobile">
+            <a href="" class="header__mobile-callback">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1264 25.9963C17.2512 25.9273 11.9369 25.193 6.37134 19.6298C0.807029 14.0654 0.0738895 8.75348 0.00357063 6.8774C-0.100605 4.01835 2.0897 1.24132 4.61987 0.15681C4.92456 0.0252718 5.25821 -0.0248089 5.5881 0.0114825C5.91799 0.0477739 6.23277 0.16919 6.50155 0.363818C8.58508 1.88187 10.0227 4.17849 11.2572 5.98427C11.5288 6.38101 11.6449 6.86379 11.5835 7.34062C11.522 7.81745 11.2872 8.25501 10.9238 8.56991L8.38324 10.4564C8.26049 10.545 8.17409 10.6752 8.14008 10.8227C8.10608 10.9702 8.12677 11.125 8.19832 11.2584C8.7739 12.3039 9.79743 13.861 10.9694 15.0327C12.1427 16.2045 13.773 17.2955 14.8916 17.936C15.0319 18.0147 15.197 18.0367 15.353 17.9975C15.5089 17.9583 15.644 17.8608 15.7303 17.7251L17.3841 15.2085C17.6881 14.8047 18.1366 14.5342 18.6357 14.4536C19.1348 14.373 19.6457 14.4886 20.0614 14.7762C21.8936 16.0443 24.0318 17.4569 25.597 19.4606C25.8075 19.7313 25.9414 20.0535 25.9847 20.3936C26.028 20.7337 25.9791 21.0792 25.8431 21.394C24.7532 23.9366 21.9951 26.1018 19.1264 25.9963Z" fill="#F9F5E9" />
+              </svg>
+            </a>
+            <div class="header__mobile-menu page-text-20 --bold --white-color" data-menu>
+              <span>Меню</span>
+              <svg width="65" height="40" viewBox="0 0 65 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="65" height="40" rx="10" fill="#F9F5E9" />
+                <rect x="0.5" y="0.5" width="64" height="39" rx="9.5" stroke="#F9F5E9" />
+                <rect x="25.8286" y="10.0295" width="24" height="4" transform="rotate(45 25.8286 10.0295)" fill="#E35800" />
+                <rect x="23" y="27" width="24" height="4" transform="rotate(-45 23 27)" fill="#E35800" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="page-body">
+          <div class="sidebar">
+            <div class="sidebar__wrapper">
+              <nav class="sidebar__nav">
+                <ul class="sidebar__main-list">
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">О нас</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Путешествия и события</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Проекты</a></li>
+                  <li class="sidebar__main-item page-text-22 --bold"><a href="">Контакты</a></li>
+                </ul>
+                <ul class="sidebar__list">
+                  <li class="sidebar__item page-text-22"><a href="">Информация для туристов</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Вопрос-ответ</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Подарочный сертификат</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Журнал</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Отзывы</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Галерея</a></li>
+                  <li class="sidebar__item page-text-22"><a href="">Магазин</a></li>
+                  <div class="sidebar__socials">
+                    <a href="" class="sidebar__social"><img src="./img/svg/inst.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/youtube.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/tg.svg" alt=""></a>
+                    <a href="" class="sidebar__social"><img src="./img/svg/dzen.svg" alt=""></a>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="content">
+            <div class="breadcrumbs" style="margin-bottom: 60px;">
+              <div class="breadcrumbs__wrapper">
+                <a href="" class="breadcrumbs__item page-text-18">Главная</a>
+                <span class="breadcrumbs__item page-text-18">О нас</span>
+              </div>
+            </div>
+            <section class="about-page">
+              <div class="about-page__wrapper">
+                <h1 class="about-page__header page-h2 --orange-color">О КЛУБЕ <br> “БАРХАТНЫЙ СЕЗОН”</h1>
+                <div class="about-page__title about-page__block">
+                  <div class="about-page__title-text page-text-18">
+                    <span class="page-text-25 --bold">«Бархатный Сезон» начался 27 сентября 2011 года, и с тех пор вот уже не одну пятилетку мы делаем то, что любим больше всего – организовываем путешествия и досуг для людей «бархатного возраста».</span>
+                    <br><br>
+                    <p>
+                      За это время мы успели объездить самые разные страны, побывали и в Японии, и в США, и в Южной Корее и во многих других необычных и удивительных местах.<br>
+                      Путешествия по России – это наша отдельная любовь. Камчатка и Сахалин, Калининград и Дагестан, Байкал и Алтай – где мы только не были, какими только маршрутами не ходили!<br>
+                      И всё это – в приятной компании единомышленников и людей близких поколений. Наши туристы – люди разных возрастов (от 50 до 85 лет, но основная часть 55-70 лет), но при этом всех объединяет любовь к путешествиям и жизни в целом. «Старость нас дома не застанет» - это слова наших туристов, а уж мы сделаем все, чтобы это воплотить
+                    </p>
+                  </div>
+                  <div class="about-page__title-img">
+                    <img src="./img/content/about-plug.jpg" alt="">
+                  </div>
+                </div>
+                <div class="about-page__idea about-page__block">
+                  <div class="about-page__idea-img"><img src="./img/content/about-idea.jpg" alt=""></div>
+                  <div class="about-page__idea-desc">
+                    <h3 class="about-page__idea-header page-text-40 --bold --orange-color">Идея «Бархатного Сезона» пришла ко мне совершенно случайно. Я пообещала своей маме исполнить ее давнюю мечту - показать Париж.</h3>
+                    <div class="about-page__idea-text page-text-18">
+                      <p>
+                        Билеты были куплены, отель забронирован, но внезапно случилось непредвиденное – маме дали визу, а мне – нет. Сказать, что я была расстроена – это не сказать ничего. Невероятными усилиями мне все же удалось организовать путешествие так, чтобы маме было комфортно: нашла в Париже русскоязычного гида, который был с мамой на протяжении всего тура и не только рассказывал исторические сведения, но и помогал в бытовой плоскости: был переводчиком, решал организационные вопросы в отеле и по всему маршруту в целом.
+                        <br>
+                        Мама вернулась из путешествия счастливой, а я подумала о всех тех людях старшего возраста, которые также, как и моя мама хотят путешествовать, но по каким-то причинам не могут этого делать самостоятельно. Так, из моей огромной любви к маме, и родилась идея создать «Бархатный Сезон», которая в итоге продолжает жить и радовать тысячи людей!
+                      </p>
+                      <span class="about-page__idea-author page-text-18 --italic">
+                        Основатель «Бархатного Сезона»,<br> Штауберг Ольга Александровна
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-page__advantages about-page__block">
+                  <h2 class="about-page__advantages-header page-h2 --orange-color">Почему нас выбирают?</h2>
+                  <div class="about-page__advantages-items">
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-1.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Официальный туроператор</span>
+                        <p class="about-page__advantages-text page-text-18">наш реестровый номер РТО 024777</p>
+                      </div>
+                    </div>
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-2.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Продуманные туры</span>
+                        <p class="about-page__advantages-text page-text-18">разработаны специально для людей старшего возраста</p>
+                      </div>
+                    </div>
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-3.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Пакетные туры</span>
+                        <p class="about-page__advantages-text page-text-18">в стоимость уже включены авиабилеты, проживание, питание и все экскурсионные услуги</p>
+                      </div>
+                    </div>
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-4.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Большой опыт</span>
+                        <p class="about-page__advantages-text page-text-18">работаем в сфере с 2011 года</p>
+                      </div>
+                    </div>
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-5.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Руководитель группы</span>
+                        <p class="about-page__advantages-text page-text-18">сопровождает на всём маршруте (из Москвы до Москвы)</p>
+                      </div>
+                    </div>
+                    <div class="about-page__advantages-item">
+                      <img src="./img/svg/about-advantage-6.svg" alt="">
+                      <div class="about-page__advantages-desc">
+                        <span class="about-page__advantages-name page-text-25 --bold">Большое комьюнити</span>
+                        <p class="about-page__advantages-text page-text-18">активных пенсионеров</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-page__quality about-page__block">
+                  <span class="about-page__quality-preview page-text-18">
+                    Каждый, кто узнал о Клубе путешествий «Бархатный сезон» в Интернете, от друзей или из журнала «Столетник», а затем пришел в наш офис и отправился с нами в путешествие, расскажет Вам свою личную историю, почему он путешествует именно с нами.
+                    <br><br>
+                    Но мы — весь коллектив компании — хотели бы, чтобы Вы знали: в нашей работе мы всегда руководствуемся следующим принципом:
+                  </span>
+                  <h2 class="about-page__quality-header page-h2 --orange-color">«С нами надежно, качественно и безопасно».</h2>
+                  <div class="about-page__quality-items">
+                    <div class="about-page__quality-item">
+                      <div class="about-page__quality-title">
+                        <img src="./img/svg/about-adv-decor.svg" alt="" class="apq-decor">
+                        <span class="about-page__quality-item__name page-h2 --bold --white-color">Надежно.</span>
+                      </div>
+                      <div class="about-page__quality-text page-text-18">
+                        <p>
+                          Мы работаем только с проверенными партнерами и поставщиками туристических услуг. Все они давно работают на российском и международных рынках и имеют хорошую репутацию. Наши партнеры предоставляют весь комплекс услуг на высоком уровне, и всегда готовы пойти нам навстречу, чтобы наши путешественники были довольны. Мы отстаиваем интересы наших путешественников!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="about-page__quality-item">
+                      <div class="about-page__quality-title">
+                        <img src="./img/svg/about-adv-decor.svg" alt="" class="apq-decor">
+                        <span class="about-page__quality-item__name page-h2 --bold --white-color">Качественно.</span>
+                      </div>
+                      <div class="about-page__quality-text page-text-18">
+                        <p>
+                          У каждого из нас есть свои критерии, по которым мы оцениваем — качественно или нет сделана работа. Когда мы готовим для Вас путешествие в ту или иную страну, мы продумываем все до мелочей и ищем на туристическом рынке самый оптимальный вариант. Удобный перелет, хорошо расположенная гостиница с уютными номерами и вкусной кухней. Мы договариваемся с партнерами и получаем бесплатные экскурсии с хорошим экскурсоводом, лечебные процедуры. Мы продумываем маршруты так, чтобы были учтены возрастные особенности людей старшего поколения.
+                          <br><br>
+                          У нас нет единственно верного алгоритма — как сделать наш тур лучшим, но есть небольшой секрет: «Мы всё делаем с душой и от всего сердца».
+                        </p>
+                      </div>
+                    </div>
+                    <div class="about-page__quality-item">
+                      <div class="about-page__quality-title">
+                        <img src="./img/svg/about-adv-decor.svg" alt="" class="apq-decor">
+                        <span class="about-page__quality-item__name page-h2 --bold --white-color">Безопасно. </span>
+                      </div>
+                      <div class="about-page__quality-text page-text-18">
+                        <p>
+                          С нашей группой всегда едет сопровождающий, который решает все Ваши вопросы во время путешествия. К нам часто приходят люди, которые выезжают за рубеж первый раз. Для них все ново и непривычно. Даже такая простая процедура, как паспортный контроль в аэропорту, может вызвать панику. Поэтому наш сопровождающий проследит, подскажет и вовремя успокоит человека. С нами такие туристы становятся опытными путешественниками :)
+                          <br><br>
+                          В наших турах очень часто находят себе новых друзей, ведь мы подбираем компаньона на время путешествия. Появляются новые знакомства и интересы, которые продолжаются и после поездки. И нам бывает очень приятно, когда к нам обращаются повторно и уже целыми компаниями для того, чтобы забронировать новое путешествие с Клубом «Бархатный Сезон». Значит мы делаем свою работу не зря :)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-page__videos about-page__block reviews --videos">
+                  <div class="reviews__wrapper">
+                    <div class="reviews__headline">
+                      <h2 class="reviews__header page-h2">Как мы путешествуем</h2>
+                      <a href="" class="reviews__link page-link --bold --orange-color">Смотреть все видео</a>
+                    </div>
+                  </div>
+                  <div class="reviews__items">
+                    <div class="reviews__item">
+                      <a href="" class="reviews__img"><img src="./img/content/gallery-3.jpg" alt=""></a>
+                    </div>
+                    <div class="reviews__item">
+                      <a href="" class="reviews__img"><img src="./img/content/gallery-3.jpg" alt=""></a>
+                    </div>
+                    <div class="reviews__item">
+                      <a href="" class="reviews__img"><img src="./img/content/gallery-3.jpg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-page__team about-page__block">
+                  <div class="about-page__team-headline">
+                    <h2 class="about-page__team-header page-h2">Наша команда</h2>
+                    <p class="about-page__team-desc page-text-18">
+                      Наша команда – это коллектив увлеченных людей, которые любят свою работу. Средний стаж работы в нашем коллективе – 8 лет, а это о многом говорит. Все мы разные, но объединяет нас любовь к путешествиям и людям ❤️.
+                    </p>
+                  </div>
+                  <div class="about-page__team-items">
+                    <div class="about-page__team-item">
+                      <div class="about-page__team-img"><img src="./img/content/team-1.jpg" alt=""></div>
+                      <div class="about-page__team-info">
+                        <span class="about-page__team-name page-text-20 --bold">Мария Соболева</span>
+                        <span class="about-page__team-mini page-text-18">Менеджер отдела туризма</span>
+                        <div class="about-page__team-comment page-text-18">
+                          <p>Дорогие любители путешествий!</p>
+                          <p>Разрешите представиться: меня зовут Мария Соболева. Работаю в клубе «Бархатный сезон» с момента его основания, а это 2011 год.</p>
+                          <p>Две пятилетки были «ударными» для нас, рождённых в СССР. Мы побывали в экспедициях на Байкале, на Камчатке, у подножия пика Ленина. Успели познакомиться с Южной Кореей, с Объединёнными Арабскими Эмиратами и Оманом. Мы совершили круизы по Волге, Персидскому заливу и Средиземному морю. До сих пор вспоминаем наши поездки на термальные курорты Словении. Незабываемы поездки по Португалии, Китаю, Шри-Ланке, Японии.</p>
+                          <p>Конечно, сейчас очень многое изменилось в географии наших путешествий. Но мой девиз - лучше радоваться в предвкушении, чем тосковать в ожидании ☺️</p>
+                          <p>И я в предвкушении новых поездок с нашими замечательными путешественниками: доброжелательными, любознательными, тактичными, внимательными друг к другу.</p>
+                          <p>Я счастлива слышать от наших туристов: «Спасибо Клубу за подругу!» Горжусь, когда слышу от гидов и экскурсоводов всех стран и континентов слова восхищения нашими туристами. И, конечно же, мы стараемся, чтобы в наших путешествиях всем было комфортно, безопасно, интересно.</p>
+                          <p>Присоединяйтесь, спешите увидеть мир!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-page__team-item">
+                      <div class="about-page__team-img"><img src="./img/content/team-2.jpg" alt=""></div>
+                      <div class="about-page__team-info">
+                        <span class="about-page__team-name page-text-20 --bold">Ольга Калистратова</span>
+                        <span class="about-page__team-mini page-text-18">Сопровождающая групп по России и Европе, ведущий менеджер отдела туризма</span>
+                        <div class="about-page__team-comment page-text-18">
+                          <p>Позитивная, активная и очень энергичная – настоящий «мотор», благодаря ей туристы никогда не унывают и не скучают в поездках, обладает знаниями российских и европейских маршрутов на уровне экскурсоводов.</p>
+                          <p>Прошла обучение и обладает Международным сертификатом Красного Креста, который дает право оказывать первую помощь на всей территории, на которую распространяется стандарт первой помощи Красного Креста.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-page__team-item">
+                      <div class="about-page__team-img"><img src="./img/content/team-3.jpg" alt=""></div>
+                      <div class="about-page__team-info">
+                        <span class="about-page__team-name page-text-20 --bold">Наталья Бурлова</span>
+                        <span class="about-page__team-mini page-text-18">Менеджер отдела туризма</span>
+                        <div class="about-page__team-comment page-text-18">
+                          <p>Приветствую Вас, друзья!</p>
+                          <p>Меня зовут Наталья Бурлова, в Клубе «Бархатный сезон» я уже 10 лет.</p>
+                          <p>На протяжении 5 лет активно работала в проекте «Связь поколений», созданном для объединения по интересам любителей активного образа жизни из числа людей старшего возраста. Мы собрали вокруг себя, сплотили и подружили большое количество почитателей скандинавской ходьбы, оздоровительной гимнастики, иностранных языков, танцев и балов со всей Москвы и Московской области. Многие нашли в этом проекте друзей, веру в себя и полноценное будущее! Этот масштабный инновационный проект нашего Клуба стал предвестником общегородской программы «Московское долголетие»!</p>
+                          <p>В свободное время я много и с удовольствием путешествую. Люблю путешествовать по нашей необъятной стране, такой разной и загадочной, даже для нас – её граждан!</p>
+                          <p>Давайте разгадывать и познавать Россию вместе с Клубом «Бархатный сезон»!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-page__team-item">
+                      <div class="about-page__team-img"><img src="./img/content/team-4.jpg" alt=""></div>
+                      <div class="about-page__team-info">
+                        <span class="about-page__team-name page-text-20 --bold">Резепова Елена</span>
+                        <span class="about-page__team-mini page-text-18">Менеджер отдела туризма</span>
+                        <div class="about-page__team-comment page-text-18">
+                          <p>Елена в нашу команду пришла недавно, но сразу стала неотъемлемой частью коллектива.</p>
+                          <p>Вместе с ней туристы побывали в Архангельске и Астрахани, Костроме и Рязани, Удмуртии и Твери. А эти отзывы еще раз подтверждают, что в нашем коллективе нет случайных людей:</p>
+                          <p>Особую БЛАГОДАРНОСТЬ хочу выразить куратору группы РЕЗЕПОВОЙ ЕЛЕНЕ, замечательная, отзывчивая, внимательная, добродушная, умеющаяя решать любые вопросы возникающие в поездке! СПАСИБО ЛЕНОЧКА ВАМ!!! БЛАГОДАРЮ!!! Все было замечательно!</p>
+                          <p>Сергеева Людмила Ивановна</p>
+                          <p>В недавнем нашем путешествии по Саратову и немецкому Поволжью всё было прекрасно: великолепный отель в центре Саратова, интереснейшие экскурсии по таким местам, куда сам и не доберёшься, очень серьёзная информативность, которой была насыщена вся наша программа, удивительно тёплая погода и потрясающий сопровождающий — наша Елена Прекрасная со скромной фамилией Резепова. Было такое ощущение, что мы все у неё под крылом, что все наши просьбы будут удовлетворены, что она всегда обо всём и о обо всех позаботится. И при этом всё будет сделано удивительно спокойно и интеллигентно.</p>
+                          <p>С уважением, Татьяна Феоктистова</p>
+                          <p>Передаем привет нашей заботливой сопровождающей Лене, Первый раз в путешествии с ней. Очень приятный и тактичный человек. Много замечательных фото успевала сделать для нас. С ней легко было общаться. Лена, нам хотелось бы с Вами встретиться на новом маршруте!</p>
+                          <p>Супруги Зубковы. Преданные " Бархатцы" </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-page__team-item">
+                      <div class="about-page__team-img"><img src="./img/content/team-5.jpg" alt=""></div>
+                      <div class="about-page__team-info">
+                        <span class="about-page__team-name page-text-20 --bold">Резепова Елена</span>
+                        <span class="about-page__team-mini page-text-18">Менеджер отдела туризма</span>
+                        <div class="about-page__team-comment page-text-18">
+                          <p>Приветствую Вас, друзья!</p>
+                          <p>Меня зовут Наталья Бурлова, в Клубе «Бархатный сезон» я уже 10 лет.</p>
+                          <p>На протяжении 5 лет активно работала в проекте «Связь поколений», созданном для объединения по интересам любителей активного образа жизни из числа людей старшего возраста. Мы собрали вокруг себя, сплотили и подружили большое количество почитателей скандинавской ходьбы, оздоровительной гимнастики, иностранных языков, танцев и балов со всей Москвы и Московской области. Многие нашли в этом проекте друзей, веру в себя и полноценное будущее! Этот масштабный инновационный проект нашего Клуба стал предвестником общегородской программы «Московское долголетие»!</p>
+                          <p>В свободное время я много и с удовольствием путешествую. Люблю путешествовать по нашей необъятной стране, такой разной и загадочной, даже для нас – её граждан!</p>
+                          <p>Давайте разгадывать и познавать Россию вместе с Клубом «Бархатный сезон»!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="journal about-page__journal about-page__block">
+                  <div class="journal__wrapper">
+                    <div class="journal__headline">
+                      <h2 class="journal__header page-h2">СМИ о нас</h2>
+                    </div>
+                  </div>
+                  <div class="journal__items">
+                    <div class="journal__item">
+                      <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                      <div class="journal__desc --white-bg">
+                        <span class="journal__date page-text-18">18.04.2014</span>
+                        <p class="journal__text page-text-18">
+                          Издание: www.mk.ru/
+                        </p>
+                        <span class="journal__name page-text-18 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                        <a href="" class="journal__btn page-btn">Читать статью</a>
+                      </div>
+                    </div>
+                    <div class="journal__item">
+                      <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                      <div class="journal__desc --white-bg">
+                        <span class="journal__date page-text-18">18.04.2014</span>
+                        <p class="journal__text page-text-18">
+                          Издание: www.mk.ru/
+                        </p>
+                        <span class="journal__name page-text-18 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                        <a href="" class="journal__btn page-btn">Читать статью</a>
+                      </div>
+                    </div>
+                    <div class="journal__item">
+                      <a href="" class="journal__img"><img src="./img/content/journal-item.jpg" alt=""></a>
+                      <div class="journal__desc --white-bg">
+                        <span class="journal__date page-text-18">18.04.2014</span>
+                        <p class="journal__text page-text-18">
+                          Издание: www.mk.ru/
+                        </p>
+                        <span class="journal__name page-text-18 --bold">Балтийские зарисовки (Светлогорск, санаторий Азимут Янтарь) </span>
+                        <a href="" class="journal__btn page-btn">Читать статью</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-page__information">
+                  <div class="about-page__information-wrapper">
+                    <h2 class="about-page__information-header page-h2">Важная информация</h2>
+                    <div class="about-page__information-grid">
+                      <div class="about-page__information-item">
+                        <span class="about-page__information-name page-text-20 --bold">ООО «ФораФарм Трэвел»</span>
+                        <div class="about-page__information-row c1">
+                          <span class="page-text-18">Юридический адрес:</span>
+                          <span class="page-text-18">129626, г. Москва, Кулаков пер., д.9 , стр.1, этаж 5, офис 525</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">ИНН</span>
+                          <span class="page-text-18">7717708625</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">КПП</span>
+                          <span class="page-text-18">771701001</span>
+                        </div>
+                      </div>
+                      <div class="about-page__information-item">
+                        <span class="about-page__information-name page-text-20 --bold">СЧЕТА, ОТКРЫТЫЕ В ПАО «Сбербанк России»</span>
+                        <div class="about-page__information-row c1">
+                          <span class="page-text-18">Расчетный счет</span>
+                          <span class="page-text-18">40702810438090010572</span>
+                        </div>
+                        <div class="about-page__information-row c1">
+                          <span class="page-text-18">Корреспондентский счет</span>
+                          <span class="page-text-18">30101810400000000225</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">БИК</span>
+                          <span class="page-text-18">044525225</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">ОКВЭД</span>
+                          <span class="page-text-18">79.1</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">ОКПО</span>
+                          <span class="page-text-18">30265517</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">ОКАТО</span>
+                          <span class="page-text-18">45280552000</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">ОГРН</span>
+                          <span class="page-text-18">1117746758140</span>
+                        </div>
+                        <div class="about-page__information-row">
+                          <span class="page-text-18">Телефон</span>
+                          <span class="page-text-18">(495) 772-99-77</span>
+                        </div>
+                        <div class="about-page__information-text page-text-18">
+                          <p>Общество с ограниченной ответственностью «ФораФарм Трэвел», именуемый(-ая) в дальнейшем «Заказчик», в лице Руководителя отдела ООО «ФораФарм Трэвел» Соболевой Марии Юрьевны, действующей на основании доверенности ФФТ/77 от 03.07.2023</p>
+                        </div>
+                      </div>
+                      <div class="about-page__information-item --transparent">
+                        <a href="" class="about-page__information-item__reestr">
+                          <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M60.257 29.5504C58.8814 28.3497 56.9029 28.3772 55.7675 28.726C56.5112 27.817 58.2432 27.0716 58.7537 26.9813C59.1425 27.1264 60.257 28.2667 60.257 29.5504ZM64.6496 24.5788C63.745 19.7611 52.4972 22.9532 46.8329 20.9069C46.7243 22.3113 48.5765 24.5615 50.3485 25.3945C47.3197 28.0108 44.6005 33.2825 44.0521 39.7228C43.505 33.2825 40.7858 28.0108 37.7571 25.3945C39.5288 24.5615 41.3828 22.3113 41.2728 20.9069C35.6085 22.9532 24.3604 19.7611 23.4542 24.5788C23.2636 25.5983 23.7564 27.1522 24.2889 27.5989C24.3839 27.2758 24.8813 26.2187 26.4491 25.9816C34.3735 24.79 40.9896 36.9472 35.0175 41.8627C34.9267 41.9371 34.9776 42.0753 35.101 42.0753H53.0058C53.1277 42.0753 53.179 41.9371 53.0894 41.8627C47.1158 36.9472 53.7319 24.79 61.6563 25.9816C63.2257 26.2187 63.7213 27.2758 63.8167 27.5987C64.3492 27.1522 64.8419 25.5985 64.6496 24.5788ZM66.577 13.5215C66.4348 13.0664 71.081 13.0551 71.081 15.9499C71.081 17.89 68.302 18.8089 68.302 20.8222C68.302 21.7599 69.3155 22.4477 69.6262 22.4477C68.9105 19.2153 71.8704 20.9069 72.6697 21.5114C71.0812 17.1645 74.6572 17.192 74.3051 15.1989C74.0601 13.8059 70.9521 14.2267 69.8272 13.5215C67.8313 12.2709 65.47 7.40418 63.9138 12.2709C66.8148 14.9519 65.1267 18.898 61.4439 18.898C61.4439 18.898 61.4232 19.4765 61.4569 19.5224C65.8498 19.3084 67.3809 16.0951 66.577 13.5215ZM15.3289 21.5114C16.1284 20.9069 19.0879 19.2153 18.3739 22.4477C18.6831 22.4477 19.6966 21.7599 19.6966 20.8222C19.6966 18.8089 16.9173 17.89 16.9173 15.9499C16.9173 13.0549 21.5637 13.0664 21.4214 13.5215C20.6191 16.0949 22.1507 19.3086 26.543 19.5224C26.5752 19.4765 26.5548 18.898 26.5548 18.898C22.8734 18.898 21.1853 14.9518 24.0851 12.2709C22.5287 7.40418 20.1674 12.2709 18.1713 13.5215C17.0465 14.2268 13.9386 13.8059 13.6935 15.1989C13.3429 17.192 16.9173 17.1647 15.3289 21.5114ZM27.8014 29.5502C29.1784 28.3496 31.1571 28.377 32.291 28.7258C31.5501 27.8168 29.8153 27.0714 29.3061 26.9812C28.9175 27.1262 27.8014 28.2665 27.8014 29.5502ZM46.1421 2.60054L43.9992 0L41.8564 2.60054L43.9994 5.33764L46.1421 2.60054ZM58.3741 10.4644L56.8502 8.61608L55.3278 10.4644L56.8502 12.2707L58.3741 10.4644ZM70.7337 63.8864L68.8021 61.8515L66.8703 63.8864L68.8021 65.6714L70.7337 63.8864ZM32.6722 10.4641L31.1482 8.61578L29.6257 10.4641L31.1482 12.2706L32.6722 10.4641ZM28.3072 19.5223H33.9907C38.769 19.5223 40.9192 16.603 41.5688 14.0712H46.431C47.0808 16.6031 49.2292 19.5224 54.0093 19.5224H59.6926C59.6926 19.5224 60.6867 18.1797 60.936 17.5151C61.8338 15.1225 60.6867 14.0067 59.0134 14.0067L56.8501 15.9584L54.6865 14.0067C53.0132 14.0067 51.8663 15.1225 52.7639 17.5151C52.8783 17.8211 53.1527 18.2702 53.4122 18.6652C51.3953 18.3894 48.8214 17.0152 48.2566 14.0712C48.2566 14.0712 49.7468 11.7149 50.121 10.7614C51.4644 7.33246 49.7485 5.93062 47.2389 5.93062L43.9992 9.7218L40.7595 5.93062C38.2499 5.93062 36.534 7.3323 37.8788 10.7614C38.2516 11.715 39.7432 14.0713 39.7432 14.0713C39.1769 17.0154 36.603 18.3895 34.5864 18.6652C34.8475 18.2704 35.1203 17.8211 35.2347 17.5151C36.1306 15.1227 34.9868 14.0068 33.3117 14.0068L31.1485 15.9585L28.9852 14.0068C27.3104 14.0068 26.1662 15.1227 27.0625 17.5151C27.3118 18.1799 28.3072 19.5223 28.3072 19.5223ZM87.0662 37.0589C85.9689 37.6117 79.5334 40.6131 71.2892 39.5028C71.3748 39.1114 71.447 38.7172 71.5064 38.321C76.9932 37.6677 81.4534 36.7414 84.2956 35.1676C87.5356 33.3728 88.9525 29.0877 87.3169 25.8998C87.2747 25.8194 87.1574 25.8049 87.0987 25.8724C86.2026 26.8991 80.5674 33.0007 71.69 34.8976C71.6671 34.44 71.6251 33.9835 71.5638 33.5292C75.8755 31.095 80.085 28.2904 82.0901 25.7259C85.1204 21.8485 84.8414 16.903 81.958 14.3814C81.9281 14.3557 81.8887 14.3443 81.8496 14.3499C81.8106 14.3553 81.7758 14.3773 81.754 14.4101C80.8419 15.9078 72.3031 29.646 62.9282 35.5766C62.8139 35.6495 62.6985 35.721 62.5822 35.7908C62.3137 35.9529 62.2844 36.3004 62.5133 36.5073C63.5939 37.4822 64.2659 38.8393 64.2659 40.3457C64.2659 42.9649 62.2375 45.1433 59.5564 45.6159C58.1936 45.8784 56.2267 45.8024 54.3378 45.1808C54.2528 45.1533 54.1648 45.2093 54.1648 45.2941V53.5901C54.1648 53.7235 54.3687 53.7564 54.417 53.6284C55.5653 50.6002 59.0032 49.9565 60.5067 49.9565C61.0478 53.1935 62.0142 55.8745 63.2698 57.3177C65.314 59.6628 68.6523 59.6299 70.0999 58.0084C70.1238 57.9816 70.1341 57.9454 70.1278 57.91C70.1215 57.8748 70.0993 57.8443 70.0676 57.8273C69.2171 57.3408 64.3506 54.3669 63.3766 49.493C63.7611 49.3608 64.1362 49.2114 64.4958 49.0347C66.0666 51.6226 68.3531 53.9273 70.1937 54.8076C73.2855 56.2839 76.1161 55.5658 77.3716 53.4047C77.4171 53.3285 77.3613 53.2337 77.2689 53.2252C75.3564 53.073 69.4869 51.3985 66.9875 47.3188C67.2739 47.0573 67.5537 46.7845 67.8148 46.4944C70.4298 48.4762 74.1275 50.2281 76.7749 50.5856C79.8723 51.005 83.382 50.0213 83.4672 46.4355C83.4686 46.3637 83.4042 46.3049 83.3281 46.3095C82.2262 46.3753 74.9355 46.6912 69.7406 43.723C69.921 43.3814 70.0893 43.0336 70.2452 42.6804C70.2452 42.6804 78.0949 44.5273 81.8143 43.9152C85.5104 43.308 87.6751 40.5652 87.257 37.1534C87.2454 37.0684 87.1455 37.0186 87.0662 37.0589ZM17.753 42.6807C17.9094 43.0341 18.0781 43.3817 18.259 43.7231C13.0657 46.6902 5.7778 46.3771 4.67208 46.3098C4.59434 46.3052 4.52982 46.367 4.53114 46.4374C4.61796 50.0217 8.12623 51.0053 11.2235 50.5861C13.8697 50.2285 17.5686 48.4766 20.1836 46.495C20.4461 46.7848 20.7249 47.0576 21.0105 47.319C18.5101 51.3985 12.6419 53.0732 10.7294 53.2254C10.637 53.2338 10.5827 53.3285 10.6269 53.4049C11.8824 55.566 14.713 56.2839 17.8063 54.8076C19.6455 53.9275 21.932 51.6227 23.5029 49.035C23.8634 49.2115 24.2388 49.361 24.6216 49.4931C23.6478 54.3669 18.7815 57.341 17.9307 57.8274C17.8994 57.8447 17.8774 57.8753 17.8713 57.9103C17.865 57.9455 17.8748 57.9816 17.8985 58.0085C19.3461 59.6299 22.6858 59.6628 24.73 57.3179C25.9858 55.8745 26.9508 53.1937 27.4919 49.9569C28.9966 49.9569 32.4329 50.6004 33.5813 53.6286C33.6312 53.7566 33.835 53.7235 33.835 53.5901V45.2941C33.835 45.2095 33.7456 45.1535 33.6606 45.1808C31.7717 45.8024 29.8049 45.8786 28.4437 45.6159C25.7613 45.1435 23.7329 42.9651 23.7329 40.3457C23.7329 38.8392 24.4059 37.4808 25.4854 36.5057C25.7156 36.3004 25.6848 35.9528 25.418 35.7907C25.3008 35.7206 25.1843 35.6493 25.0689 35.5765C15.6998 29.649 7.16527 15.9207 6.24567 14.4128C6.20298 14.3424 6.10031 14.3282 6.03726 14.3826C3.15819 16.9057 2.87805 21.8497 5.90819 25.7256C7.91327 28.2901 12.1223 31.0948 16.433 33.5289C16.3723 33.9831 16.3306 34.4395 16.3085 34.8971C7.43807 33.0018 1.80754 26.9099 0.902453 25.8762C0.842467 25.8058 0.721908 25.8203 0.680989 25.9005C-0.951117 29.09 0.465536 33.3722 3.70261 35.1673C6.54501 36.7411 11.005 37.6672 16.4919 38.3207C16.5512 38.717 16.6235 39.1111 16.7089 39.5025C8.47353 40.6111 2.04074 37.6172 0.934868 37.0598C0.852734 37.0183 0.753 37.07 0.742733 37.1561C0.326494 40.5682 2.48953 43.308 6.18554 43.9152C9.90353 44.5273 17.753 42.6807 17.753 42.6807ZM68.8019 68.2919L65.9419 66.0517C64.8008 66.7281 63.9619 67.8026 63.6362 69.0619C61.916 69.3016 57.2253 68.2648 57.6814 67.5771C62.8221 60.3798 58.8899 56.0947 54.1644 56.333V61.1669C54.1644 62.719 52.8034 63.9771 51.1269 63.9771H47.8638C45.523 63.9771 43.9992 66.3191 43.9992 66.3191C43.9992 66.3191 42.4753 63.9771 40.1346 63.9771H36.8713C35.1937 63.9771 33.8354 62.719 33.8354 61.1669V56.3332C29.1097 56.0951 25.1747 60.38 30.3168 67.5773C30.7687 68.2579 25.9477 69.3479 23.6863 69.0721C23.0906 68.4573 22.231 68.0698 21.2689 68.0698C20.8598 68.0699 20.4541 68.1423 20.0706 68.2838C20.0706 68.2838 11.1842 59.909 11.0214 59.8271L11.0948 59.6575C11.6007 58.7157 10.8264 57.6888 10.3366 57.7609C10.9056 57.0817 10.9321 54.1075 7.77583 53.4197C7.8681 54.017 7.91502 55.2362 7.91502 55.2362C7.91502 55.2362 5.47904 53.925 4.25569 55.0567C3.18077 56.3233 4.67252 58.6208 4.67252 58.6208C4.67252 58.6208 3.4257 58.6509 2.81133 58.5994C3.71478 61.6408 6.74492 61.4254 7.40053 60.8251C7.35783 61.3092 8.45373 61.9983 9.38199 61.4455L9.78971 61.2487C9.86158 61.3448 18.5164 69.4843 18.5164 69.4843C18.119 70.0716 17.9298 70.7925 18.0601 71.5607C18.2655 72.7614 19.2704 73.7565 20.5537 74.0147C21.4599 74.1958 22.3121 74.0207 22.9955 73.6227L25.2866 75.7395C25.4905 75.9234 25.7662 76.0382 26.0742 76.0167C26.6344 75.9794 27.0539 75.5269 27.0114 75.0087C26.9937 74.7745 26.8737 74.5737 26.7077 74.4212C26.6711 74.3809 24.3743 72.2586 24.3743 72.2586C26.269 70.9359 29.7993 70.0042 32.7296 70.0042C33.2446 70.0042 33.4863 69.5707 33.309 69.1453C31.9816 65.9674 34.8359 63.6657 37.7882 65.5396C39.0761 66.3568 40.3844 67.9665 41.37 70.6517C36.5254 71.8194 30.4433 75.0357 29.2129 78.5469C28.7391 79.9028 30.304 81.7506 32.2047 82.1228C32.2384 82.1301 32.2736 82.1237 32.3026 82.1052C32.3315 82.0866 32.3517 82.057 32.3588 82.0236C33.3517 76.7821 39.0144 72.8758 41.9611 72.2124C42.1092 72.6074 42.0606 72.4796 42.2088 72.8732C38.9999 74.3838 35.8875 77.5702 34.9987 81.3583C34.591 83.0931 36.5344 84.6569 38.1388 85.0849C38.2195 85.1064 38.2987 85.0504 38.3031 84.973C38.6083 80.1824 40.7335 76.1142 42.637 74.2632C42.6891 74.6249 42.7283 74.9885 42.7545 75.353C42.7545 75.353 40.8053 80.7597 40.8053 84.7044C40.8053 86.5396 43.5451 87.8205 43.9498 88C44.4556 87.8205 47.1941 86.5396 47.1941 84.7044C47.1941 80.7595 45.2449 75.353 45.2449 75.353C45.2715 74.9885 45.311 74.6249 45.3637 74.2632C47.266 76.1142 49.3924 80.1808 49.6962 84.9714C49.7006 85.0488 49.7814 85.1064 49.8602 85.0849C51.4663 84.6571 53.4083 83.0933 53.0019 81.3586C52.1116 77.5704 49.0008 74.3841 45.7917 72.8733C45.9384 72.4798 45.89 72.6074 46.0381 72.2126C48.9864 72.876 54.6475 76.7819 55.6405 82.0234C55.6477 82.057 55.6679 82.0862 55.6969 82.1049C55.7259 82.1235 55.761 82.1299 55.7946 82.1227C57.6938 81.7506 59.2616 79.9026 58.785 78.547C57.5575 75.0358 51.4737 71.8196 46.6295 70.6519C47.6163 67.9664 48.9246 66.3568 50.2123 65.5396C53.1632 63.6657 56.0175 65.9678 54.6901 69.1456C54.5124 69.5705 54.7529 70.0042 55.2694 70.0042C58.584 70.0042 62.667 71.196 64.2831 72.7945C65.3159 74.3366 67.224 75.3232 69.3771 75.1119C71.8233 74.8737 73.8182 73.044 74.094 70.7826C74.3345 68.8009 73.3048 67.0215 71.6636 66.0523L68.8019 68.2919ZM47.7213 53.8556C48.7408 53.4797 50.3381 53.7842 50.2838 55.2487C50.2706 55.5804 50.7386 55.5804 50.7722 55.2415C51.0772 53.0487 49.5886 52.4169 48.0311 52.6738C47.8375 51.9198 47.6792 51.2609 47.4987 50.6074C47.355 50.0792 47.302 49.0868 47.9167 49.0868C48.2484 49.0868 48.1149 50.01 48.0841 50.4076C48.056 50.7568 48.1821 50.9678 48.4669 50.978C48.6445 50.9851 48.8659 50.7596 48.998 50.6102C49.8898 49.6065 50.0965 48.0527 49.0523 47.3033C48.1783 46.6741 45.9898 47.1423 45.3883 48.0383C45.2975 47.7008 44.8634 47.1439 44.6548 46.901C44.4528 46.6643 44.3999 46.5018 44.6801 46.2936C44.8121 46.1931 45.211 45.7984 45.211 45.3904C45.211 45.1493 45.0232 44.704 44.4263 44.704C43.9556 44.704 43.4319 45.0285 43.4319 45.7523C43.4319 45.9133 43.4716 46.0858 43.5756 46.2709C43.2778 46.222 42.4699 46.2421 42.0548 46.344L47.7939 62.021C49.4365 61.2139 50.6406 59.9359 50.6406 58.5645C50.6406 57.3955 48.911 57.7833 48.0709 58.6953C47.8011 57.2134 47.5604 55.8448 47.2979 54.4803C47.2264 54.1042 47.4179 53.969 47.7213 53.8556ZM39.6065 43.2066L40.812 46.5409C39.7797 46.785 38.1193 47.5344 38.1193 48.5267C38.1193 49.848 40.4675 50.7081 41.8257 50.6048C41.758 50.9062 41.8359 51.1748 42.0472 51.4203C41.5542 51.4203 40.6245 51.6486 40.3194 51.976C39.5993 51.3082 38.4728 51.0655 37.9373 51.4721C37.3992 51.8813 37.3832 52.5749 37.9449 53.359C38.3363 53.9018 38.4832 54.4375 38.0431 55.0664C39.6799 55.0664 39.077 52.9482 39.718 52.9482C39.6344 53.359 39.6859 53.8344 39.8721 54.3613C39.9954 54.7117 39.9954 54.96 39.7843 55.2976C39.2562 56.1377 38.4349 58.0675 38.5464 59.8124C38.0095 59.8094 37.7367 59.6786 37.9259 58.9493C37.9964 58.6777 37.8277 58.4839 37.6049 58.8187C37.3583 59.1876 37.2395 59.818 37.2395 60.0878C37.2395 61.6417 39.0991 61.9546 39.809 61.6259C41.8626 63.6039 45.8958 63.0763 47.2466 62.4128L40.1449 43.0165C39.9998 42.6504 39.4789 42.8259 39.6065 43.2066ZM39.36 59.1833C39.2133 58.3848 40.3296 56.9576 41.7492 55.5804C41.4471 56.4779 41.6349 58.0246 42.2275 58.5573C41.1976 58.5573 39.9743 58.7497 39.36 59.1833Z" fill="#E35800" />
+                          </svg>
+                          <span class="page-text-18 --bold --orange-color">
+                            Наша компания в Росреестре
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="subscribe">
+              <div class="subscribe__wrapper">
+                <div class="subscribe__left">
+                  <h3 class="subscribe__header page-text-40">Подпишитесь <br> на рассылку, <br> <span>узнавайте первыми о новых турах и новостях клуба!</span></h3>
+                  <span class="subscribe__mini page-text-20 --bold">Также, подписывайтесь <br> на нас в <a href="" class="page-link --bold">телеграм!</a></span>
+                </div>
+                <div class="subscribe__center">
+                  <img src="./img/content/subscribe-img-1.png" alt="" class="desc">
+                  <img src="./img/content/subscribe-mob.png" alt="" class="mob">
+                </div>
+                <div class="subscribe__right">
+                  <form action="" class="subscribe__form">
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">ФИО*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Электронная почта*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Номер телефона*</span>
+                      <input type="phone" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__terms">
+                      <input type="checkbox" class="subscribe__check">
+                      <div class="subscribe__custom-check"></div>
+                      <span class="subscribe__terms-text">Согласен с правилами предоставления <a href="" class="page-link --bold">персональных данных</a></span>
+                    </label>
+                    <button class="subscribe__submit page-btn --white --bold">Подписаться</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container">
+        <p><a href="#" data-open-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-open-modal="success">modal--success link</a></p>
+      </div> -->
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="" class="footer__logo"><img src="./img/svg/logo.svg" alt=""></a>
+            <div class="footer__left-wrap">
+              <a href="" class="footer__reestr">
+                <img src="./img/svg/gerb.svg" alt="">
+                <span class="page-text-18 --bold">Наша компания в Росреестре</span>
+              </a>
+              <div class="footer__nav">
+                <span class="footer__nav-header page-text-18 --bold">Навигация по сайту</span>
+                <div class="footer__nav-wrap">
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">О нас</a></li>
+                    <li class="footer__nav-item"><a href="">Путешествия и события</a></li>
+                    <li class="footer__nav-item"><a href="">Проекты</a></li>
+                    <li class="footer__nav-item"><a href="">Контакты</a></li>
+                  </ul>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">Информация для туристов</a></li>
+                    <li class="footer__nav-item"><a href="">Вопрос-ответ</a></li>
+                    <li class="footer__nav-item"><a href="">Подарочный сертификат</a></li>
+                  </ul>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="">Журнал</a></li>
+                    <li class="footer__nav-item"><a href="">Отзывы</a></li>
+                    <li class="footer__nav-item"><a href="">Галерея</a></li>
+                    <li class="footer__nav-item"><a href="">Магазин</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Электронная почта</span>
+              <div class="footer__info-wrap">
+                <a href="mailto:forafarmtravel@mail.ru" class="footer__info-text page-text-18">forafarmtravel@mail.ru</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Номера телефонов</span>
+              <div class="footer__info-wrap">
+                <a href="tel:+74957729977" class="footer__info-text page-text-18">+7 (495) 772-99-77<br>доб. 1345, 1433, 1458, 1354</a>
+                <a href="tel:+79653867672" class="footer__info-text page-text-18">+7 (965) 386-76-72 (многоканальный)</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Адрес:</span>
+              <div class="footer__info-wrap">
+                <span class="footer__info-text page-text-18">129626, г. Москва, Кулаков пер., дом 9, стр. 1</span>
+                <a href="tel:+79653867672" class="footer__info-link page-link --bold">Как нас найти?</a>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Режим работы</span>
+              <div class="footer__info-wrap">
+                <span class="footer__info-text page-text-18">ПН-ПТ с 11:00 до 18:00</span>
+              </div>
+            </div>
+            <div class="footer__info">
+              <span class="footer__info-header page-text-18 --bold">Социальные сети</span>
+              <div class="footer__info-wrap">
+                <div class="footer__socials">
+                  <a href="" class="footer__social"><img src="./img/svg/inst.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/youtube.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/tg.svg" alt=""></a>
+                  <a href="" class="footer__social"><img src="./img/svg/dzen.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span class="footer__bottom-text page-text-18">©RA-Studio 2023</span>
+          <div class="footer__bottom-wrap">
+            <a href="" class="footer__bottom-text page-text-18">Публичная оферта</a>
+            <a href="" class="footer__bottom-text page-text-18">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal modal--preload    " data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="mymodal-wrapper">
+            <div class="mymodal__headline">
+              <span class="mymodal__header page-text-25 --bold">Заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.</span>
+              <button class="mymodal__btn page-btn --bold" data-close-modal>Хорошо, всё понятно</button>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload    " data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="mymodal-wrapper">
+            <div class="mymodal__headline">
+              <span class="mymodal__header page-text-25 --bold">Оставьте данные, чтобя встать в лист ожидания. Наш менеджер свяжется с вами в ближайшее время.</span>
+            </div>
+            <form action="" class="mymodal__form">
+              <label class="request__label">
+                <span class="request__label-name page-text-18">ФИО*</span>
+                <input type="text" name="name" class="request__field">
+              </label>
+              <label class="request__label">
+                <span class="request__label-name page-text-18">Номер телефона*</span>
+                <input type="phone" name="phone" class="request__field" inputmode="text">
+              </label>
+              <label class="request__terms">
+                <input type="checkbox" class="request__terms-check">
+                <div class="request__terms-custom">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.19632 10L0 5.25988L1.04908 4.07484L4.19632 7.62994L10.9509 0L12 1.18503L4.19632 10Z" fill="#E35800"></path>
+                  </svg>
+                </div>
+                <span class="request__terms-text page-text-18">
+                  Согласен с правилами предоставления <a href="">персональных данных</a>
+                </span>
+              </label>
+              <div class="mymodal__form-bottom">
+                <button class="mymodal__submit page-btn --bold">Отправить</button>
+              </div>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

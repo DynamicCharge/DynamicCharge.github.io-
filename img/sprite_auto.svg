@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="alert" viewBox="0 0 21 74">
+<path d="M0 64.9451C0 59.8453 4.7341 55.8903 10.5607 55.8903C16.3873 55.8903 21 59.8453 21 64.9451C21 69.9409 16.3873 74 10.5607 74C4.7341 74 0 69.9409 0 64.9451ZM17.1156 48.6048H3.88439L0.121387 0H21L17.1156 48.6048Z" fill="white"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="minus" viewBox="0 0 23 6">
+<path d="M23 6H0V0H23V6Z" fill="#E35800"/>
+</symbol><symbol id="plus" viewBox="0 0 23 23">
+<path d="M14.3693 23H8.58546V14.3694H0V8.67583H8.58546V0H14.3693V8.67583H23V14.3694H14.3693V23Z" fill="currentColor"/>
+</symbol></svg>
