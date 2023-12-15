@@ -548,50 +548,58 @@ template {
 
 @font-face {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/geometria_bold.otf");
+  src: url("../fonts/Geometria-ExtraLight.otf");
 }
 
 @font-face {
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria-ExtraLight.otf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria.otf");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria-Italic.ttf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria-Heavy.otf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria-Bold.otf");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 600;
   font-family: "Geometria";
   font-display: swap;
   src: url("../fonts/geometria_bolditalic.otf");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/geometria_medium.otf");
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 500;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/geometria_mediumitalic.otf");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/geometria_light.otf");
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 400;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/geometria_lightitalic.otf");
 }
 
 *,
@@ -1909,7 +1917,7 @@ body {
   width: 100%;
   color: #E35800;
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 100%;
   /* 70px */
@@ -1918,8 +1926,24 @@ body {
   padding: 0;
 }
 
-.title .title__header .--text-bg {
-  line-height: 140%;
+.title .title__header .--text-bg-el {
+  position: relative;
+  color: #fff;
+}
+
+.title .title__header .--text-bg-el::before {
+  content: "";
+  width: 102%;
+  height: 66px;
+  background: #E35800;
+  display: block;
+  position: absolute;
+  top: 52%;
+  left: -5px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .title .title__aside-item {
@@ -5657,6 +5681,12 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .title .title__header {
     font-size: 29px;
+  }
+
+  .title .title__header .--text-bg-el::before {
+    content: "";
+    height: 90%;
+    width: 104%;
   }
 
   .title .title__slide img {
