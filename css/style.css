@@ -1463,6 +1463,7 @@ body {
   padding-right: 0 !important;
   background-color: #F9F5E9;
   color: #212121;
+  overflow-x: hidden;
 }
 
 .page-h2 {
@@ -2384,7 +2385,7 @@ body {
 
 .advantages .advantages__adv-name {
   line-height: 100%;
-  max-width: 184px;
+  max-width: 175px;
   width: 100%;
   display: inline-block;
 }
