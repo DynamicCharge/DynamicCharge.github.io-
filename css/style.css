@@ -4683,6 +4683,10 @@ html body .content section .ms-options-wrap ul li label:hover {
   padding: 30px;
 }
 
+.page-reviews .page-reviews__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .page-reviews .page-reviews__item-date {
   display: block;
   margin-bottom: 20px;
