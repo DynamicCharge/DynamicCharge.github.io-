@@ -1945,6 +1945,7 @@ body {
 .title .title__header .--text-bg-el {
   position: relative;
   color: #fff;
+  display: inline-block;
 }
 
 .title .title__header .--text-bg-el::before {
@@ -1999,8 +2000,8 @@ body {
 
 .title .title__aside-hero {
   position: absolute;
-  top: 0;
-  right: -25px;
+  top: -45px;
+  right: -29px;
 }
 
 .title .title__aside-header {
@@ -3176,6 +3177,10 @@ body {
   align-items: start;
 }
 
+.program .program__item._active .program__day {
+  top: 0px;
+}
+
 .program .program__item-header {
   display: -ms-grid;
   display: grid;
@@ -3185,6 +3190,12 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.program .program__day {
+  height: 100%;
+  position: relative;
+  top: 7px;
 }
 
 .program .program__btn {
