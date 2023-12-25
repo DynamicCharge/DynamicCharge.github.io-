@@ -930,6 +930,7 @@ button,
   border: 1px solid #ffffff;
   border-radius: 10px;
   height: 40px;
+  width: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1453,10 +1454,6 @@ button,
 * {
   font-family: "Geometria";
   font-style: normal;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 body {
@@ -1999,6 +1996,10 @@ body {
   height: 100%;
 }
 
+.title .title__aside-bg.--mob {
+  display: none;
+}
+
 .title .title__aside-hero {
   position: absolute;
   top: -45px;
@@ -2318,7 +2319,7 @@ body {
 
 .advantages .advantages__decor {
   position: absolute;
-  top: 40px;
+  top: 0px;
   left: 0;
   z-index: 0;
 }
@@ -2335,6 +2336,10 @@ body {
 
 .advantages .advantages__grid:not(:last-child) {
   margin-bottom: 100px;
+}
+
+.advantages .advantages__header {
+  margin: 30px 0 0;
 }
 
 .advantages .advantages__numbers {
@@ -2385,7 +2390,7 @@ body {
 
 .advantages .advantages__adv-name {
   line-height: 100%;
-  max-width: 175px;
+  max-width: 170px;
   width: 100%;
   display: inline-block;
 }
@@ -2444,6 +2449,7 @@ body {
 .reviews .reviews__img {
   border-radius: 20px;
   overflow: hidden;
+  display: block;
 }
 
 .reviews .reviews__img img {
@@ -2635,6 +2641,10 @@ body {
 
 .subscribe a {
   color: inherit;
+}
+
+.subscribe .subscribe-mobile-line {
+  display: none;
 }
 
 .subscribe .subscribe__wrapper {
@@ -3005,6 +3015,11 @@ body {
 
 .tour-title__controll-text {
   margin: 0;
+  font-size: 18px;
+}
+
+.tour-title__controll-price__val {
+  font-size: 30px;
 }
 
 .tour-title__controll-body {
@@ -3372,7 +3387,7 @@ body {
 }
 
 .question .question__btns {
-  margin-top: 34px;
+  margin-top: 28px;
 }
 
 .question .question__btn {
@@ -3405,6 +3420,7 @@ body {
 
 .request .request__header {
   max-width: 900px;
+  margin: 0 0 30px;
 }
 
 .request .request__header span {
@@ -3974,7 +3990,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 
 .journal-detail .journal-detail__content img {
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .journal-detail .journal-detail__info {
@@ -4390,7 +4406,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 }
 
 .about-page .about-page__quality-preview {
-  max-width: 785px;
+  max-width: 805px;
   display: block;
 }
 
@@ -4454,7 +4470,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 
 .about-page .about-page__team-header {
   margin: 0;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .about-page .about-page__team-desc {
@@ -4607,6 +4623,10 @@ html body .content section .ms-options-wrap ul li label:hover {
 
 .gift-title .gift-title__header {
   margin-top: 0;
+}
+
+.gift-title .gift-title__text {
+  line-height: 120%;
 }
 
 .gift-title .gift-title__img {
@@ -5030,6 +5050,39 @@ html body .content section .ms-options-wrap ul li label:hover {
   text-align: right;
 }
 
+.cart .cart__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cart .cart__nav-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cart .cart__nav-price {
+  margin-right: 32px;
+}
+
+.cart .cart__nav-continue {
+  background: transparent;
+}
+
 .info-tooltip {
   position: relative;
   width: 25px;
@@ -5037,11 +5090,6 @@ html body .content section .ms-options-wrap ul li label:hover {
   display: block;
   margin-left: 10px;
   cursor: pointer;
-}
-
-.info-tooltip:hover .info-tooltip__content {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .info-tooltip .info-tooltip__content {
@@ -5068,6 +5116,10 @@ html body .content section .ms-options-wrap ul li label:hover {
 
 .info-tooltip .info-tooltip__text {
   margin: 0;
+}
+
+.catalog-section.--page .page__nav {
+  display: none;
 }
 
 .fancybox-button.fancybox-button--zoom {
@@ -5114,6 +5166,11 @@ html body .content section .ms-options-wrap ul li label:hover {
   .tour-title__controll-header {
     position: relative;
     top: 20px;
+  }
+
+  .info-tooltip:hover .info-tooltip__content {
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -5202,7 +5259,9 @@ html body .content section .ms-options-wrap ul li label:hover {
   }
 
   .cart-icon {
-    top: -70px;
+    top: 180px;
+    right: 20px;
+    position: fixed;
   }
 
   .cart-icon .cart-icon-img {
@@ -5552,6 +5611,121 @@ html body .content section .ms-options-wrap ul li label:hover {
 }
 
 @media screen and (max-width: 1100px) {
+  .detail .detail__header {
+    font-size: 20px;
+  }
+
+  .cart-icon {
+    top: 80px;
+  }
+
+  .detail__price {
+    font-size: 40px;
+  }
+
+  .reviews .reviews__headline {
+    margin-bottom: 23px;
+  }
+
+  .advantages .advantages__adv-text {
+    max-width: 195px;
+  }
+
+  .advantages .advantages__number-desc {
+    max-width: 116px;
+  }
+
+  .advantages .advantages__number:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .advantages .advantages__number:nth-child(2) {
+    -webkit-box-ordinal-group: 7;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .advantages .advantages__number:nth-child(3) {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .advantages .advantages__number:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .advantages .advantages__number:nth-child(5) {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .advantages .advantages__number:nth-child(6) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .advantages .advantages__header {
+    font-size: 40px;
+  }
+
+  .tours__item-body__cost {
+    font-size: 30px;
+  }
+
+  .tours .tours__headline {
+    margin-bottom: 23px;
+  }
+
+  .title .title__aside-bg {
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: none;
+  }
+
+  .title .title__aside-bg.--mob {
+    display: block;
+  }
+
+  .title .title__wrapper {
+    gap: 50px;
+  }
+
+  .cart .cart__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .cart .cart__nav-continue {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .cart .cart__nav-result {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .cart .cart__nav-order {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
   .advantages .advantages__decor {
     display: none;
   }
@@ -5627,6 +5801,15 @@ html body .content section .ms-options-wrap ul li label:hover {
   }
 
   .projects .projects__title {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .projects .projects__title h2 {
+    color: #212121 !important;
+  }
+
+  .projects .projects__title img {
     display: none;
   }
 
@@ -5639,6 +5822,7 @@ html body .content section .ms-options-wrap ul li label:hover {
   .tours__item-img {
     height: 320px;
     max-height: 100%;
+    padding: 10px;
   }
 
   .tours__item-body {
@@ -5711,6 +5895,14 @@ html body .content section .ms-options-wrap ul li label:hover {
     margin: 0 auto;
   }
 
+  .journal-detail .journal-detail__date {
+    margin-bottom: 10px;
+  }
+
+  .journal-detail .journal-detail__header {
+    margin-bottom: 20px;
+  }
+
   .journal {
     position: relative;
     padding-bottom: 50px;
@@ -5758,12 +5950,9 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .gift .gift__top {
     background: #F9F5E9;
-    border-top: 1px solid #E35800;
-    border-left: 1px solid #E35800;
-    border-right: 1px solid #E35800;
-    border-bottom: 1px solid #E35800;
-    border-radius: 20px 20px 20px 20px;
-    padding: 23px 20px 23px;
+    padding: 5px;
+    border-radius: 0 !important;
+    overflow: visible;
   }
 
   .gift {
@@ -5798,6 +5987,13 @@ html body .content section .ms-options-wrap ul li label:hover {
     overflow: hidden;
   }
 
+  .subscribe .subscribe-mobile-line {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
   .subscribe .subscribe__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5806,7 +6002,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
-    padding: 20px 10px 125px;
+    padding: 20px 10px 180px;
     position: relative;
   }
 
@@ -5816,7 +6012,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .subscribe .subscribe__center {
     top: 65px;
-    right: -268px;
+    right: -250px;
     bottom: unset;
     left: unset;
     -webkit-transform: none;
@@ -5842,7 +6038,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .subscribe .subscribe__mini {
     position: absolute;
-    bottom: 40px;
+    bottom: 66px;
   }
 
   .content section:not(:last-child) {
@@ -5897,11 +6093,19 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .title .title__aside-text {
     line-height: 100%;
+    max-width: 200px;
+  }
+
+  .title .title__aside-text br {
+    display: none;
   }
 
   .title .title__aside-hero {
-    max-width: 249px;
-    top: 170px;
+    max-width: 292px;
+    top: 128px;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
 
   .advantages {
@@ -5916,6 +6120,7 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .advantages__grid-header {
     font-size: 20px;
+    line-height: 120%;
   }
 
   .reviews .reviews__desc {
@@ -5935,6 +6140,44 @@ html body .content section .ms-options-wrap ul li label:hover {
     margin-top: 20px;
   }
 
+  .request .request__header {
+    margin-bottom: 23px;
+  }
+
+  .request .request__img {
+    margin-top: 0;
+  }
+
+  .info-tooltip .info-tooltip__content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    opacity: 1;
+    pointer-events: all;
+    top: unset;
+    z-index: 1000;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+  }
+
+  .info-tooltip .info-tooltip__content._active {
+    display: block;
+  }
+
+  .info-tooltip__content-close {
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+  }
+
   .tour-title .tour-title__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -5943,10 +6186,15 @@ html body .content section .ms-options-wrap ul li label:hover {
   .tour-title .tour-title__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    position: relative;
   }
 
   .tour-title .tour-title__tags {
-    margin-top: 30px;
+    margin: 0;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 90%;
   }
 
   .tour-title .tour-title__header {
@@ -5967,6 +6215,26 @@ html body .content section .ms-options-wrap ul li label:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
+  }
+
+  .tour-title__controll:not(.--mobile) .tour-title__controll-text span {
+    display: block;
+  }
+
+  .tour-title__controll-price__val {
+    font-size: 30px;
+  }
+
+  .program .program__bottom {
+    margin-top: 25px;
+  }
+
+  .program .program__bottom-link {
+    margin-bottom: 45px;
+  }
+
+  .fancybox-button--close {
+    right: 0;
   }
 
   .tour-title__controll-img {
@@ -6005,6 +6273,8 @@ html body .content section .ms-options-wrap ul li label:hover {
   .tour-title__controll-header {
     max-width: 211px;
     margin-bottom: 0 !important;
+    position: relative;
+    top: 10px;
   }
 
   .tour-title__controll-headline {
@@ -6058,7 +6328,15 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .request .request__pricing .tour-title__controll {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  .request .request__grid {
+    gap: 30px;
+  }
+
+  .catalog-section__item-price {
+    font-size: 40px;
   }
 
   .request__options-wrap.--grid {
@@ -6106,6 +6384,63 @@ html body .content section .ms-options-wrap ul li label:hover {
     display: none;
   }
 
+  .catalog-section .page__nav,
+  .page-reviews .page__nav,
+  .gallery-page .page__nav,
+  .journal .page__nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .catalog-section .page-nav-btn,
+  .page-reviews .page-nav-btn,
+  .gallery-page .page-nav-btn,
+  .journal .page-nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .catalog-section .page-nav-btn:not(:last-child),
+  .page-reviews .page-nav-btn:not(:last-child),
+  .gallery-page .page-nav-btn:not(:last-child),
+  .journal .page-nav-btn:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .catalog-section .pagination,
+  .page-reviews .pagination,
+  .gallery-page .pagination,
+  .journal .pagination {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 15px;
+  }
+
+  .catalog-section .--prev,
+  .page-reviews .--prev,
+  .gallery-page .--prev,
+  .journal .--prev {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .catalog-section .--next,
+  .page-reviews .--next,
+  .gallery-page .--next,
+  .journal .--next {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
   .travel-events .travel-events__headline {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6144,10 +6479,61 @@ html body .content section .ms-options-wrap ul li label:hover {
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    border-top: 1px solid #E35800;
+    border-bottom: 1px solid #E35800;
+    padding: 20px 0;
+    margin-bottom: 15px;
+  }
+
+  .about-page__title-text br {
+    display: none;
+  }
+
+  .about-page__title-text span {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .travel-events .travel-events__filters {
+    margin-bottom: 30px;
+  }
+
+  .gift-title .gift-title__bottom-img {
+    display: none;
+  }
+
+  .question .question__text {
+    max-width: 320px;
+  }
+
+  .question .question__text a {
+    color: #E35800;
+  }
+
+  .about-page__advantages-name {
+    line-height: 100%;
+  }
+
+  .about-page .about-page__advantages-text {
+    line-height: 100%;
+  }
+
+  .question .question__header {
+    color: #212121;
+  }
+
+  .travel-events__label:last-child {
+    width: 100%;
+  }
+
+  .travel-events__label:last-child .ms-options-wrap {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .travel-events .travel-events__label:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 60px;
   }
 
   .projects-page .projects__title {
@@ -6178,7 +6564,7 @@ html body .content section .ms-options-wrap ul li label:hover {
   }
 
   .about-page .about-page__header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .about-page .about-page__idea {
@@ -6511,6 +6897,17 @@ html body .content section .ms-options-wrap ul li label:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .cart__img img {
+    min-height: 320px;
+  }
+
+  .detail__amount-input {
+    width: 40px;
   }
 
   .cart .cart__name {
@@ -6528,6 +6925,73 @@ html body .content section .ms-options-wrap ul li label:hover {
     left: 0;
     width: 100%;
     text-align: center;
+  }
+
+  .for-tourists .for-tourists__header {
+    margin-bottom: 20px;
+  }
+
+  .for-tourists .for-tourists__items {
+    margin-top: 20px;
+  }
+
+  .program .program__wrapper:first-child {
+    margin-bottom: 30px;
+  }
+
+  .program .program__headline {
+    margin-bottom: 20px;
+  }
+
+  .contacts-page__right {
+    max-width: 670px;
+  }
+
+  .contacts-page__managers {
+    display: none;
+  }
+
+  .contacts-page__managers.--mobile {
+    display: block;
+    margin-top: 100px;
+  }
+
+  .contacts-page__left {
+    margin-bottom: 100px;
+  }
+
+  .contacts-page__subheader {
+    margin-top: 0;
+    font-size: 40px;
+  }
+
+  .contacts-page .contacts-page__info-row {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    max-width: 320px;
+  }
+
+  .contacts-page .contacts-page__info-row:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  html body .content section .ms-options-wrap button {
+    padding-left: 0;
+  }
+
+  .catalog-section.--page {
+    padding-bottom: 0;
+  }
+
+  .catalog-section.--page .page__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .cart .cart__delete {
+    padding-right: 25px;
   }
 }
 
