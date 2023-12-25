@@ -5817,6 +5817,10 @@ html body .content section .ms-options-wrap ul li label:hover {
     display: none;
   }
 
+  .projects .projects__title .projects__title-bg.--orange-bg + .projects__title-header {
+    color: #212121;
+  }
+
   .projects .projects__title-header {
     max-width: 320px;
   }
