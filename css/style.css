@@ -4816,6 +4816,10 @@ html body .content section .ms-options-wrap ul li label:hover {
   width: 100%;
 }
 
+.contacts-page .contacts-page__managers.--mobile {
+  display: none;
+}
+
 .contacts-page .contacts-page__managers-items {
   display: -ms-grid;
   display: grid;
@@ -6947,11 +6951,11 @@ html body .content section .ms-options-wrap ul li label:hover {
     max-width: 670px;
   }
 
-  .contacts-page__managers {
+  .contacts-page .contacts-page__managers {
     display: none;
   }
 
-  .contacts-page__managers.--mobile {
+  .contacts-page .contacts-page__managers.--mobile {
     display: block;
     margin-top: 100px;
   }
