@@ -5096,6 +5096,10 @@ html body .content section .ms-options-wrap ul li label:hover {
   cursor: pointer;
 }
 
+.info-tooltip .info-tooltip__content-close {
+  display: none;
+}
+
 .info-tooltip .info-tooltip__content {
   position: absolute;
   top: 100%;
@@ -6176,7 +6180,7 @@ html body .content section .ms-options-wrap ul li label:hover {
   }
 
   .info-tooltip__content-close {
-    display: block;
+    display: block !important;
     position: absolute;
     top: -20px;
     right: 20px;
