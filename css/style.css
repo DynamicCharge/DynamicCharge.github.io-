@@ -5813,12 +5813,12 @@ html body .content section .ms-options-wrap ul li label:hover {
     border-radius: 0;
   }
 
-  .projects .projects__title h2 {
-    color: #212121 !important;
-  }
-
   .projects .projects__title img {
     display: none;
+  }
+
+  .projects .projects__title-header {
+    max-width: 320px;
   }
 
   .tours__item {
@@ -6392,6 +6392,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     display: none;
   }
 
+  .travel-events .page__nav,
   .catalog-section .page__nav,
   .page-reviews .page__nav,
   .gallery-page .page__nav,
@@ -6400,6 +6401,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     flex-wrap: wrap;
   }
 
+  .travel-events .page-nav-btn,
   .catalog-section .page-nav-btn,
   .page-reviews .page-nav-btn,
   .gallery-page .page-nav-btn,
@@ -6414,6 +6416,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     max-width: 300px;
   }
 
+  .travel-events .page-nav-btn:not(:last-child),
   .catalog-section .page-nav-btn:not(:last-child),
   .page-reviews .page-nav-btn:not(:last-child),
   .gallery-page .page-nav-btn:not(:last-child),
@@ -6421,6 +6424,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     margin-bottom: 10px;
   }
 
+  .travel-events .pagination,
   .catalog-section .pagination,
   .page-reviews .pagination,
   .gallery-page .pagination,
@@ -6431,6 +6435,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     margin-bottom: 15px;
   }
 
+  .travel-events .--prev,
   .catalog-section .--prev,
   .page-reviews .--prev,
   .gallery-page .--prev,
@@ -6440,6 +6445,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     order: 2;
   }
 
+  .travel-events .--next,
   .catalog-section .--next,
   .page-reviews .--next,
   .gallery-page .--next,
@@ -6524,10 +6530,6 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .about-page .about-page__advantages-text {
     line-height: 100%;
-  }
-
-  .question .question__header {
-    color: #212121;
   }
 
   .travel-events__label:last-child {
@@ -6980,6 +6982,18 @@ html body .content section .ms-options-wrap ul li label:hover {
     max-width: 320px;
   }
 
+  .contacts-page .contacts-page__info-row br {
+    display: none;
+  }
+
+  .contacts-page .contacts-page__info-row .phones {
+    display: block;
+  }
+
+  .contacts-page .contacts-page__info-row .phones:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
   .contacts-page .contacts-page__info-row:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -7000,6 +7014,14 @@ html body .content section .ms-options-wrap ul li label:hover {
 
   .cart .cart__delete {
     padding-right: 25px;
+  }
+
+  .tour-title {
+    padding-top: 0;
+  }
+
+  .tour-title + .journal {
+    padding-bottom: 0;
   }
 }
 
