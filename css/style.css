@@ -548,7 +548,7 @@ template {
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Geometria";
   font-display: swap;
   src: url("../fonts/Geometria-ExtraLight.otf");
@@ -556,7 +556,7 @@ template {
 
 @font-face {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Geometria";
   font-display: swap;
   src: url("../fonts/Geometria-ExtraLight.otf");
@@ -583,7 +583,15 @@ template {
   font-weight: 500;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria-Heavy.otf");
+  src: url("../fonts/geometria_medium.otf");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 500;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/geometria_mediumitalic.otf");
 }
 
 @font-face {
@@ -597,6 +605,22 @@ template {
 @font-face {
   font-style: italic;
   font-weight: 600;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/geometria_bolditalic.otf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Geometria";
+  font-display: swap;
+  src: url("../fonts/Geometria-Bold.otf");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 700;
   font-family: "Geometria";
   font-display: swap;
   src: url("../fonts/geometria_bolditalic.otf");
@@ -1545,8 +1569,10 @@ body {
   color: #E35800;
 }
 
-.page-btn.--green {
+.page-btn.--grey {
   background: #349B70;
+  background: #7B7B7B;
+  pointer-events: none;
 }
 
 .page-btn.--bordered {
@@ -7042,6 +7068,15 @@ html body .content section .ms-options-wrap ul li label:hover {
 }
 
 @media screen and (max-width: 800px) {
+  .tour-title .tour-title__img {
+    height: 320px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+
   .contacts-page .contacts-page__managers-items {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
