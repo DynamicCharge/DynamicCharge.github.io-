@@ -551,7 +551,7 @@ template {
   font-weight: 300;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria-ExtraLight.otf");
+  src: url("../../fonts/new/Geometria-Light.ttf");
 }
 
 @font-face {
@@ -559,7 +559,7 @@ template {
   font-weight: 300;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria-ExtraLight.otf");
+  src: url("../../fonts/new/Geometria-LightItalic.ttf");
 }
 
 @font-face {
@@ -567,7 +567,7 @@ template {
   font-weight: 400;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria.otf");
+  src: url("../../fonts/new/Geometria-Regular.ttf");
 }
 
 @font-face {
@@ -575,7 +575,7 @@ template {
   font-weight: 400;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria-Italic.ttf");
+  src: url("../../fonts/new/Geometria-Italic.ttf");
 }
 
 @font-face {
@@ -583,7 +583,7 @@ template {
   font-weight: 500;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/geometria_medium.otf");
+  src: url("../../fonts/new/Geometria-Medium.ttf");
 }
 
 @font-face {
@@ -591,23 +591,7 @@ template {
   font-weight: 500;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/geometria_mediumitalic.otf");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 600;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/Geometria-Bold.otf");
-}
-
-@font-face {
-  font-style: italic;
-  font-weight: 600;
-  font-family: "Geometria";
-  font-display: swap;
-  src: url("../fonts/geometria_bolditalic.otf");
+  src: url("../../fonts/new/Geometria-MediumItalic.ttf");
 }
 
 @font-face {
@@ -615,7 +599,7 @@ template {
   font-weight: 700;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/Geometria-Bold.otf");
+  src: url("../../fonts/new/Geometria-Bold.ttf");
 }
 
 @font-face {
@@ -623,7 +607,7 @@ template {
   font-weight: 700;
   font-family: "Geometria";
   font-display: swap;
-  src: url("../fonts/geometria_bolditalic.otf");
+  src: url("../../fonts/new/Geometria-BoldItalic.ttf");
 }
 
 *,
@@ -3410,6 +3394,7 @@ body {
   text-decoration-line: underline;
   font-weight: 700;
   color: inherit;
+  display: inline-block;
 }
 
 .question .question__btns {
@@ -4649,6 +4634,10 @@ html body .content section .ms-options-wrap ul li label:hover {
 
 .gift-title .gift-title__header {
   margin-top: 0;
+}
+
+.gift-title .gift-title__desc {
+  line-height: 120%;
 }
 
 .gift-title .gift-title__text {
