@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src=" https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js "></script>
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Бархатный сезон — Галерея</title>
+  <title>Бархатный сезон — Корзина</title>
 </head>
 
 <body>
@@ -123,133 +123,99 @@
             <div class="breadcrumbs" style="margin-bottom: 60px;">
               <div class="breadcrumbs__wrapper">
                 <a href="" class="breadcrumbs__item page-text-18">Главная</a>
-                <span class="breadcrumbs__item page-text-18">Галерея</span>
+                <span class="breadcrumbs__item page-text-18">Корзина</span>
               </div>
             </div>
-            <section class="gallery-page">
-              <div class="gallery-page__wrapper">
-                <div class="gallery-page__headline">
-                  <h1 class="gallery-page__header page-h2 --orange-color --uppercase">ГАЛЕРЕЯ</h1>
-                  <form action="" class="gallery-page-filters">
-                    <select name="" id="" class="gallery-page__filter" multiple aria-placeholder="Выбрать год">
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                    </select>
+            <section class="cart">
+              <div class="cart__wrapper">
+                <h1 class="cart__header page-h2 --orange-color">КОРЗИНА</h1>
+                <div class="cart__items">
+                  <div class="cart__item">
+                    <div class="cart__img"><img src="./img/content/cart-img.png" alt=""></div>
+                    <span class="cart__name page-text-18 --bold">Дикуля Эффективное питание и обновление суставов с хондроитином и глюкозамином + МСМ, 975 мг</span>
+                    <div class="cart__calc">
+                      <div class="detail__amount">
+                        <div class="detail__amount-math" data-math="-">
+                          -
+                        </div>
+                        <input type="text" disabled value="1" data-amount class="detail__amount-input page-text-25 --bold">
+                        <div class="detail__amount-math" data-math="+">
+                          +
+                        </div>
+                      </div>
+                      <span class="cart__calc-text page-text-18">
+                        <span class="symbol">×</span>
+                        <span class="cart__calc-price" data-amount-price="1500">1500 ₽</span>
+                        <span class="symbol">= </span>
+                        <span class="cart__calc-result" data-amount-result="">1500 ₽</span>
+                      </span>
+                    </div>
+                    <a href="" class="cart__delete page-text-18 page-link">Удалить</a>
+                  </div>
+                  <div class="cart__item">
+                    <div class="cart__img"><img src="./img/content/cart-img.png" alt=""></div>
+                    <span class="cart__name page-text-18 --bold">Дикуля Эффективное питание и обновление суставов с хондроитином и глюкозамином + МСМ, 975 мг</span>
+                    <div class="cart__calc">
+                      <div class="detail__amount">
+                        <div class="detail__amount-math" data-math="-">
+                          -
+                        </div>
+                        <input type="text" disabled value="1" data-amount class="detail__amount-input page-text-25 --bold">
+                        <div class="detail__amount-math" data-math="+">
+                          +
+                        </div>
+                      </div>
+                      <span class="cart__calc-text page-text-18">
+                        <span class="symbol">×</span>
+                        <span class="cart__calc-price" data-amount-price="1500">1500 ₽</span>
+                        <span class="symbol">= </span>
+                        <span class="cart__calc-result" data-amount-result="">1500 ₽</span>
+                      </span>
+                    </div>
+                    <a href="" class="cart__delete page-text-18 page-link">Удалить</a>
+                  </div>
+                </div>
+                <div class="cart__nav">
+                  <a href="" class="cart__nav-continue page-btn --bordered --orange-color --bold">Продолжить покупки</a>
+                  <div class="cart__nav-result">
+                    <span class="cart__nav-price page-text-40 --bold">Итого: 15 000 ₽</span>
+                    <a href="" class="cart__nav-order page-btn --bold">Оформить заказ</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="subscribe">
+              <div class="subscribe__wrapper">
+                <div class="subscribe__left">
+                  <h3 class="subscribe__header page-text-40">Подпишитесь <br> на рассылку, <br> <span>узнавайте первыми о&nbsp;новых турах и&nbsp;новостях клуба!</span></h3>
+                  <span class="subscribe__mini page-text-20 --bold">Также, подписывайтесь <br> на нас в <a href="" class="page-link --bold">телеграм!</a></span>
+                  <img src="./img/svg/subscribe-line.svg" alt="" class="subscribe-mobile-line">
+                </div>
+                <div class="subscribe__center">
+                  <img src="./img/content/subscribe-img-1.png" alt="" class="desc">
+                  <img src="./img/content/subscribe-mob.png" alt="" class="mob">
+                </div>
+                <div class="subscribe__right">
+                  <form action="" class="subscribe__form">
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">ФИО*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Электронная почта*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Номер телефона*</span>
+                      <input type="phone" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__terms">
+                      <input type="checkbox" class="subscribe__check">
+                      <div class="subscribe__custom-check"></div>
+                      <span class="subscribe__terms-text">Согласен с правилами предоставления <a href="" class="page-link --bold">персональных данных</a></span>
+                    </label>
+                    <button class="subscribe__submit page-btn --white --bold">Подписаться</button>
                   </form>
-                </div>
-                <div class="gallery-page__items">
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="page__nav">
-                  <a href="" class="journal__nav-btn page-nav-btn --prev"><img src="./img/svg/arrow-next.svg" alt=""> Предыдущая страница</a>
-                  <div class="pagination">
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color _active">1</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">2</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">3</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">4</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">5</a>
-                  </div>
-                  <a href="" class="journal__nav-btn page-nav-btn --next">Следующая страница <img src="./img/svg/arrow-next.svg" alt=""> </a>
                 </div>
               </div>
             </section>
@@ -396,44 +362,6 @@
                 <button class="mymodal__submit page-btn --bold">Отправить</button>
               </div>
             </form>
-          </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--preload    " data-modal="order-success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <div class="mymodal-wrapper">
-            <div class="mymodal__headline">
-              <span class="mymodal__header page-text-25 --bold">Наш менеджер свяжется с вами в ближайшее время.</span>
-            </div>
-          </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--preload    " data-modal="order">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <div class="mymodal-wrapper">
-            <div class="mymodal__headline">
-              <span class="mymodal__header page-text-25 --bold">Заказ успешно оформлен! Наш менеджер свяжется с вами в ближайшее время.</span>
-            </div>
-            <div class="mymodal__btn-wrap">
-              <a href="" class="mymodal__submit page-btn --bold">Оплатить онлайн</a>
-              <a href="" class="mymodal__submit page-btn --bold" data-open-modal="order-success">Оплатить при получении</a>
-            </div>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">

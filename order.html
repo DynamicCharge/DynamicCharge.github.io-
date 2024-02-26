@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src=" https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js "></script>
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Бархатный сезон — Галерея</title>
+  <title>Бархатный сезон — Оформление заказа</title>
 </head>
 
 <body>
@@ -123,133 +123,97 @@
             <div class="breadcrumbs" style="margin-bottom: 60px;">
               <div class="breadcrumbs__wrapper">
                 <a href="" class="breadcrumbs__item page-text-18">Главная</a>
-                <span class="breadcrumbs__item page-text-18">Галерея</span>
+                <span class="breadcrumbs__item page-text-18">Корзина</span>
               </div>
             </div>
-            <section class="gallery-page">
-              <div class="gallery-page__wrapper">
-                <div class="gallery-page__headline">
-                  <h1 class="gallery-page__header page-h2 --orange-color --uppercase">ГАЛЕРЕЯ</h1>
-                  <form action="" class="gallery-page-filters">
-                    <select name="" id="" class="gallery-page__filter" multiple aria-placeholder="Выбрать год">
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                    </select>
+            <section class="order">
+              <div class="order__wrapper">
+                <h1 class="order__header page-h2 --orange-color">ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+                <div class="order__body">
+                  <form action="" class="order__form">
+                    <div class="order__form-wrap">
+                      <span class="order__form-header page-text-20 --bold">Введите данные:</span>
+                      <div class="order__form-fields">
+                        <label class="order__form-label">
+                          <span class="order__form-name page-text-18">ФИО*</span>
+                          <input type="text" class="order__form-field " name="name">
+                        </label>
+                        <label class="order__form-label">
+                          <span class="order__form-name page-text-18">Электронная почта*</span>
+                          <input type="email" class="order__form-field " name="email">
+                        </label>
+                        <label class="order__form-label">
+                          <span class="order__form-name page-text-18">Номер телефона*</span>
+                          <input type="phone" class="order__form-field " name="">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="order__form-wrap">
+                      <span class="order__form-header page-text-20 --bold">Выберите тип доставки:</span>
+                      <div class="order__form-types">
+                        <label class="order__form-type">
+                          <div class="order__form-type__btn">
+                            <input type="radio" name="deliveryType" value="Самовывоз" class="order__form-radio">
+                            <div class="order__form-custom"></div>
+                            <span class="order__form-type__text page-text-18">Самовывоз</span>
+                          </div>
+                          <span class="order__form-type__text page-text-18">По адресу г. Москва, Кулаков пер., дом 9, стр. 1</span>
+                        </label>
+                        <label class="order__form-type">
+                          <div class="order__form-type__btn">
+                            <input type="radio" checked name="deliveryType" value="Доставка" class="order__form-radio">
+                            <div class="order__form-custom"></div>
+                            <span class="order__form-type__text page-text-18">Доставка</span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="order__form-bottom">
+                        <label class="order__form-terms">
+                          <input type="checkbox" name="terms" class="order__form-check">
+                          <div class="order__form-check-custom"></div>
+                          <span class="span order__form-text page-text-18">
+                            Согласен с правилами предоставления <a href="" class="--bold" style="text-decoration: underline;">персональных данных</a>
+                          </span>
+                        </label>
+                      </div>
+                      <button type="submit" class="order__form-submit page-btn" data-open-modal="order">Оформить заказ</button>
+                    </div>
                   </form>
                 </div>
-                <div class="gallery-page__items">
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="gallery-page__item">
-                    <span class="gallery-page__date page-text-18">13-17 октября 2020 г.</span>
-                    <div class="gallery-page__item-headline">
-                      <span class="gallery-page__item-name page-text-18 --bold">Гастрономические чудеса Северного Кавказа</span>
-                      <a href="" class="gallery-page__item-link page-link --bold --orange-color">Смотреть все фото</a>
-                    </div>
-                    <div class="gallery-page__item-grid">
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                      <a href="" class="gallery-page__item-img">
-                        <img src="./img/content/gallery-page-1.jpg" alt="">
-                      </a>
-                    </div>
-                  </div>
+              </div>
+            </section>
+            <section class="subscribe">
+              <div class="subscribe__wrapper">
+                <div class="subscribe__left">
+                  <h3 class="subscribe__header page-text-40">Подпишитесь <br> на рассылку, <br> <span>узнавайте первыми о&nbsp;новых турах и&nbsp;новостях клуба!</span></h3>
+                  <span class="subscribe__mini page-text-20 --bold">Также, подписывайтесь <br> на нас в <a href="" class="page-link --bold">телеграм!</a></span>
+                  <img src="./img/svg/subscribe-line.svg" alt="" class="subscribe-mobile-line">
                 </div>
-                <div class="page__nav">
-                  <a href="" class="journal__nav-btn page-nav-btn --prev"><img src="./img/svg/arrow-next.svg" alt=""> Предыдущая страница</a>
-                  <div class="pagination">
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color _active">1</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">2</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">3</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">4</a>
-                    <a href="" class="pagination__link page-text-20 --bold --orange-color">5</a>
-                  </div>
-                  <a href="" class="journal__nav-btn page-nav-btn --next">Следующая страница <img src="./img/svg/arrow-next.svg" alt=""> </a>
+                <div class="subscribe__center">
+                  <img src="./img/content/subscribe-img-1.png" alt="" class="desc">
+                  <img src="./img/content/subscribe-mob.png" alt="" class="mob">
+                </div>
+                <div class="subscribe__right">
+                  <form action="" class="subscribe__form">
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">ФИО*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Электронная почта*</span>
+                      <input type="text" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__label">
+                      <span class="subscribe__label-name page-text-18">Номер телефона*</span>
+                      <input type="phone" class="subscribe__field">
+                    </label>
+                    <label class="subscribe__terms">
+                      <input type="checkbox" class="subscribe__check">
+                      <div class="subscribe__custom-check"></div>
+                      <span class="subscribe__terms-text">Согласен с правилами предоставления <a href="" class="page-link --bold">персональных данных</a></span>
+                    </label>
+                    <button class="subscribe__submit page-btn --white --bold">Подписаться</button>
+                  </form>
                 </div>
               </div>
             </section>
