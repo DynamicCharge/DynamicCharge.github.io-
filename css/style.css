@@ -2822,12 +2822,23 @@ body {
   width: 100%;
 }
 
+.travel-events__archive {
+  text-decoration: underline;
+  margin-top: 15px;
+  display: block;
+  padding-left: 30px;
+  padding-right: 18px;
+}
+
 .tour-title .tour-title__wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10fr 14fr;
   grid-template-columns: 10fr 14fr;
   gap: 20px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .tour-title .tour-title__left {
@@ -2836,7 +2847,7 @@ body {
 }
 
 .tour-title .tour-title__img {
-  height: 100%;
+  height: auto;
 }
 
 .tour-title .tour-title__tags {
@@ -4009,10 +4020,10 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 70px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  margin-bottom: 26px;
 }
 
 .travel-events .travel-events__header {
