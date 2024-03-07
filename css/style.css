@@ -5856,6 +5856,8 @@ html body .content section .ms-options-wrap ul li label:hover {
 .promo-form .promo-form__form {
   max-width: 387px;
   width: 100%;
+  position: relative;
+  z-index: 5;
 }
 
 .promo-form .promo-form__label {
