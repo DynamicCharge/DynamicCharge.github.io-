@@ -230,20 +230,20 @@
                     <div class="discussions__form-body">
                       <label class="request__label">
                         <span class="request__label-name page-text-18">ФИО*</span>
-                        <input type="text" class="request__field --white-bg">
+                        <input type="text" name="fio" required class="request__field --white-bg">
                       </label>
                       <label class="request__label">
                         <span class="request__label-name page-text-18">Электронная почта*</span>
-                        <input type="email" class="request__field --white-bg">
+                        <input type="email" required name="email" class="request__field --white-bg">
                       </label>
                       <label class="request__label">
                         <span class="request__label-name page-text-18">Ваш вопрос</span>
-                        <textarea class="request__area --white-bg" rows="4"></textarea>
+                        <textarea required name="question" class="request__area --white-bg" rows="4"></textarea>
                       </label>
                     </div>
                     <div class="discussions__form-bottom">
                       <label class="discussions__form-terms">
-                        <input type="checkbox" class="discussions__form-check">
+                        <input type="checkbox" class="discussions__form-check" required>
                         <div class="discussions__form-custom">
                           <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.19632 10L0 5.25988L1.04908 4.07484L4.19632 7.62994L10.9509 0L12 1.18503L4.19632 10Z" fill="#000"></path>

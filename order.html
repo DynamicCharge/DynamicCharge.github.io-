@@ -136,15 +136,15 @@
                       <div class="order__form-fields">
                         <label class="order__form-label">
                           <span class="order__form-name page-text-18">ФИО*</span>
-                          <input type="text" class="order__form-field " name="name">
+                          <input type="text" required class="order__form-field " name="name">
                         </label>
                         <label class="order__form-label">
                           <span class="order__form-name page-text-18">Электронная почта*</span>
-                          <input type="email" class="order__form-field " name="email">
+                          <input type="email" required class="order__form-field " name="email">
                         </label>
                         <label class="order__form-label">
                           <span class="order__form-name page-text-18">Номер телефона*</span>
-                          <input type="phone" class="order__form-field " name="">
+                          <input type="phone" required class="order__form-field " name="phone">
                         </label>
                       </div>
                     </div>
@@ -153,17 +153,30 @@
                       <div class="order__form-types">
                         <label class="order__form-type">
                           <div class="order__form-type__btn">
-                            <input type="radio" name="deliveryType" value="Самовывоз" class="order__form-radio">
-                            <div class="order__form-custom"></div>
-                            <span class="order__form-type__text page-text-18">Самовывоз</span>
+                            <div class="order__form-type__btn-inner">
+                              <input type="radio" name="deliveryType" checked value="Самовывоз" class="order__form-radio">
+                              <div class="order__form-custom"></div>
+                              <span class="order__form-type__text page-text-18">Самовывоз</span>
+                            </div>
                           </div>
                           <span class="order__form-type__text page-text-18">По адресу г. Москва, Кулаков пер., дом 9, стр. 1</span>
                         </label>
                         <label class="order__form-type">
                           <div class="order__form-type__btn">
-                            <input type="radio" checked name="deliveryType" value="Доставка" class="order__form-radio">
-                            <div class="order__form-custom"></div>
-                            <span class="order__form-type__text page-text-18">Доставка</span>
+                            <div class="order__form-type__btn-inner">
+                              <input type="radio" name="deliveryType" value="Доставка" class="order__form-radio">
+                              <div class="order__form-custom"></div>
+                              <span class="order__form-type__text page-text-18">Доставка</span>
+                            </div>
+                            <div class="order__form-type__field">
+                              <!-- <span class="order__form-type__field-name page-text-18">Адрес доставки*</span>
+                              <input type="text" required name="address" class="order__form-field"> -->
+                              <span class="page-text-18">
+                                Стоимость доставки от 100 рублей,
+                                <br>
+                                <a href="" class="--bold --orange-color --underlined">подробнее об условиях</a>
+                              </span>
+                            </div>
                           </div>
                         </label>
                       </div>
@@ -176,7 +189,7 @@
                           </span>
                         </label>
                       </div>
-                      <button type="submit" class="order__form-submit page-btn" data-open-modal="order">Оформить заказ</button>
+                      <button type="submit" class="order__form-submit page-btn">Оформить заказ</button>
                     </div>
                   </form>
                 </div>

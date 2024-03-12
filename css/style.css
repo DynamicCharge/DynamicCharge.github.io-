@@ -3114,6 +3114,10 @@ body {
 }
 
 .order .order__form-type__btn {
+  margin-bottom: 15px;
+}
+
+.order .order__form-type__btn-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3125,7 +3129,6 @@ body {
   align-items: center;
   position: relative;
   cursor: pointer;
-  margin-bottom: 15px;
 }
 
 .order .order__form-radio {
@@ -3166,6 +3169,21 @@ body {
   border-radius: 50%;
   background: #E35800;
   display: none;
+}
+
+.order .order__form-type__field {
+  display: none;
+  margin-top: 11px;
+}
+
+.order .order__form-type__field input {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  max-width: 320px;
+}
+
+.order .order__form-type__field.--active {
+  display: block;
 }
 
 .order .order__form-bottom {
