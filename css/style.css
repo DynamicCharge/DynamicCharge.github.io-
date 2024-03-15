@@ -6077,6 +6077,11 @@ html body .content section .ms-options-wrap ul li label:hover {
   height: 19px !important;
 }
 
+.reviews .reviews__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 1100px) {
   .tour-title__controll-header {
     position: relative;
@@ -8205,6 +8210,10 @@ html body .content section .ms-options-wrap ul li label:hover {
 @media screen and (max-width: 768px) {
   .breadcrumbs {
     font-size: 12px;
+  }
+
+  .gallery-page-filters {
+    width: 100% !important;
   }
 }
 
