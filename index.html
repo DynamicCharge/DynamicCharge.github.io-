@@ -18,6 +18,8 @@
   <!-- используйте только для шрифта находящегося на первом экране -->
   <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://api-maps.yandex.ru/2.1/?apikey=d7f796e6-b982-4f3a-9dae-e214d0513617&lang=ru_RU" type="text/javascript"></script>
@@ -92,6 +94,10 @@
           <div class="sidebar">
             <div class="sidebar__wrapper">
               <nav class="sidebar__nav">
+                <div class="sidebar-mobile__val">
+                  <span class="sidebar-mobile__val-item page-text-18 --white-color">€ = 100.71₽</span>
+                  <span class="sidebar-mobile__val-item page-text-18 --white-color">$ = 93.99₽</span>
+                </div>
                 <ul class="sidebar__main-list">
                   <li class="sidebar__main-item page-text-22 --bold"><a href="">О нас</a></li>
                   <li class="sidebar__main-item page-text-22 --bold"><a href="">Путешествия и события</a></li>
@@ -162,7 +168,7 @@
                     </div>
                     <a href="" class="title__aside-link page-btn --bold">Узнать больше</a>
                   </div>
-                  <a href="" target="_blank" class="title__aside-link page-nav-btn" style="text-align: center; text-decoration: underline;">Старая версия сайта</a>
+                  <a href="" target="_blank" class="title__aside-link page-btn --bold" style="text-align: center;">Старая версия сайта</a>
                 </div>
               </div>
             </section>
@@ -281,15 +287,46 @@
                         </div>
                       </div>
                       <div class="tours__item-body__right">
-                        <span class="tours__item-body__subhead page-text-20 --bold">Стоимость тура с авиабилетами:</span>
-                        <div class="tours__item-body__price">
-                          <div class="tours__item-body__price-item">
-                            <p class="tours__item-text page-text-18">Одноместное размещение</p>
-                            <p class="tours__item-body__cost page-text-30 --bold">120 500 ₽</p>
+                        <div class="tours__item-body__subheadline">
+                          <span class="tours__item-body__subhead page-text-20 --bold">Стоимость тура с авиабилетами:</span>
+                          <div class="tours__item-body__wrap">
+                            <select name="" id="" class="tours__item-body__select">
+                              <option value="Рубли, ₽">Рубли, ₽</option>
+                              <option value="Доллар, $">Доллар, $</option>
+                              <option value="Евро, €">Евро, €</option>
+                            </select>
                           </div>
-                          <div class="tours__item-body__price-item">
-                            <p class="tours__item-text page-text-18">Двухместное размещение</p>
-                            <p class="tours__item-body__cost page-text-30 --bold">105 500 ₽</p>
+                        </div>
+                        <div class="tours__item-body__price">
+                          <div class="tours__item-body__price-wrap --active" data-price-content="Рубли, ₽">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 ₽</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 ₽</p>
+                            </div>
+                          </div>
+                          <div class="tours__item-body__price-wrap" data-price-content="Доллар, $">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 $</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 $</p>
+                            </div>
+                          </div>
+                          <div class="tours__item-body__price-wrap" data-price-content="Евро, €">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 €</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 €</p>
+                            </div>
                           </div>
                         </div>
                         <div class="tours__item-body__btns">
@@ -345,15 +382,46 @@
                         </div>
                       </div>
                       <div class="tours__item-body__right">
-                        <span class="tours__item-body__subhead page-text-20 --bold">Стоимость тура с авиабилетами:</span>
-                        <div class="tours__item-body__price">
-                          <div class="tours__item-body__price-item">
-                            <p class="tours__item-text page-text-18">Одноместное размещение</p>
-                            <p class="tours__item-body__cost page-text-30 --bold">120 500 ₽</p>
+                        <div class="tours__item-body__subheadline">
+                          <span class="tours__item-body__subhead page-text-20 --bold">Стоимость тура с авиабилетами:</span>
+                          <div class="tours__item-body__wrap">
+                            <select name="" id="" class="tours__item-body__select">
+                              <option value="Рубли, ₽">Рубли, ₽</option>
+                              <option value="Доллар, $">Доллар, $</option>
+                              <option value="Евро, €">Евро, €</option>
+                            </select>
                           </div>
-                          <div class="tours__item-body__price-item">
-                            <p class="tours__item-text page-text-18">Двухместное размещение</p>
-                            <p class="tours__item-body__cost page-text-30 --bold">105 500 ₽</p>
+                        </div>
+                        <div class="tours__item-body__price">
+                          <div class="tours__item-body__price-wrap --active" data-price-content="Рубли, ₽">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 ₽</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 ₽</p>
+                            </div>
+                          </div>
+                          <div class="tours__item-body__price-wrap" data-price-content="Доллар, $">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 $</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 $</p>
+                            </div>
+                          </div>
+                          <div class="tours__item-body__price-wrap" data-price-content="Евро, €">
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Одноместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">120 500 €</p>
+                            </div>
+                            <div class="tours__item-body__price-item">
+                              <p class="tours__item-text page-text-18">Двухместное размещение</p>
+                              <p class="tours__item-body__cost page-text-30 --bold">105 500 €</p>
+                            </div>
                           </div>
                         </div>
                         <div class="tours__item-body__btns">
@@ -361,7 +429,6 @@
                           <a href="" class="tours__item-body__btn page-btn --bold" data-open-modal="feedback">Оставить заявку</a>
                         </div>
                       </div>
-                      <div class="tours__item-bottom"><span class="page-text-20 --bold">Принимаем запись на 2025 год!</span></div>
                     </div>
                   </div>
                 </div>

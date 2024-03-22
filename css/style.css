@@ -2281,8 +2281,74 @@ body {
   margin-bottom: 20px;
 }
 
-.tours__item-body__subhead {
+.tours__item-body__subheadline {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tours__item-body__subhead {
+  display: block;
+}
+
+.ui-selectmenu-button.ui-button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.ui-selectmenu-text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.ui-widget.ui-widget-content {
+  border-radius: 10px;
+  background: #fff;
+  border-color: #E35800;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: #E35800;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  line-height: 100%;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  margin: 0;
+}
+
+.ui-widget.ui-widget-content {
+  width: 120px;
+}
+
+.tours__item-body__price-wrap {
+  display: none;
+}
+
+.tours__item-body__price-wrap.--active {
   display: block;
 }
 
@@ -3725,7 +3791,6 @@ body {
 
 .request .request__img {
   margin-top: 20px;
-  height: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -6078,6 +6143,10 @@ html body .content section .ms-options-wrap ul li label:hover {
   text-decoration: underline;
 }
 
+.sidebar-mobile__val {
+  display: none;
+}
+
 .catalog-section.--page .page__nav {
   display: none;
 }
@@ -6306,6 +6375,44 @@ html body .content section .ms-options-wrap ul li label:hover {
 }
 
 @media screen and (max-width: 1400px) {
+  .page-h2 {
+    font-size: 30px;
+  }
+
+  .page-text-40 {
+    font-size: 30px;
+  }
+
+  .page-text-30 {
+    font-size: 20px;
+  }
+
+  .page-text-25 {
+    font-size: 18px;
+  }
+
+  .page-text-22 {
+    font-size: 18px;
+  }
+
+  .page-text-20 {
+    font-size: 18px;
+  }
+
+  .page-btn {
+    font-size: 18px;
+  }
+
+  .title .swiper-pagination .swiper-pagination-bullet {
+    font-size: 18px;
+  }
+
+  .detail__amount-math {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
   .header .header__logo {
     -ms-flex-negative: 10;
     flex-shrink: 10;
@@ -6343,40 +6450,14 @@ html body .content section .ms-options-wrap ul li label:hover {
     display: flex;
   }
 
-  .page-h2 {
-    font-size: 30px;
+  .sidebar-mobile__val {
+    display: block;
+    max-width: 100px;
+    margin: 10px auto 10px;
   }
 
-  .page-text-40 {
-    font-size: 30px;
-  }
-
-  .page-text-30 {
-    font-size: 20px;
-  }
-
-  .page-text-25 {
-    font-size: 18px;
-  }
-
-  .page-text-22 {
-    font-size: 18px;
-  }
-
-  .page-text-20 {
-    font-size: 18px;
-  }
-
-  .page-btn {
-    font-size: 18px;
-  }
-
-  .title .swiper-pagination .swiper-pagination-bullet {
-    font-size: 18px;
-  }
-
-  .detail__amount-math {
-    font-size: 18px;
+  .sidebar-mobile__val-item {
+    display: block;
   }
 
   .promo-show .promo-show__header {
