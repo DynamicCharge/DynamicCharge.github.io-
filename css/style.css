@@ -2196,6 +2196,14 @@ body {
   height: 100%;
 }
 
+.tours__item-img img.--mid {
+  display: none;
+}
+
+.tours__item-img img.--mob {
+  display: none;
+}
+
 .tours__item-tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2507,6 +2515,16 @@ a.ui-button:active,
   margin-top: 0;
 }
 
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .reviews .reviews__headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2524,12 +2542,21 @@ a.ui-button:active,
   margin: 0;
 }
 
+.reviews .reviews__link {
+  margin: 30px auto 0;
+}
+
 .reviews .reviews__items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  overflow: hidden;
+}
+
+.reviews .reviews__items:not(.swiper-initialized) .reviews__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.reviews .reviews__items:not(.swiper-initialized) .reviews__item {
+  max-width: 440px;
+  width: 100%;
 }
 
 .reviews .reviews__img {
@@ -2918,6 +2945,14 @@ a.ui-button:active,
 
 .tour-title .tour-title__img {
   height: auto;
+}
+
+.tour-title .tour-title__img.--mid {
+  display: none;
+}
+
+.tour-title .tour-title__img.--mob {
+  display: none;
 }
 
 .tour-title .tour-title__tags {
@@ -5609,14 +5644,14 @@ html body .content section .ms-options-wrap ul li label:hover {
   cursor: pointer;
 }
 
-.promo-mentors .promo-mentors__text {
+.promo-mentors__text {
   max-width: 421px;
   width: 100%;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.promo-mentors .promo-mentors__headline {
+.promo-mentors__headline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5629,11 +5664,11 @@ html body .content section .ms-options-wrap ul li label:hover {
   margin-bottom: 30px;
 }
 
-.promo-mentors .promo-mentors__header {
+.promo-mentors__header {
   margin-top: 0;
 }
 
-.promo-mentors .promo-mentors__controlls {
+.promo-mentors__controlls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5645,7 +5680,7 @@ html body .content section .ms-options-wrap ul li label:hover {
   align-items: center;
 }
 
-.promo-mentors .promo-mentors__controll {
+.promo-mentors__controll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5661,32 +5696,32 @@ html body .content section .ms-options-wrap ul li label:hover {
   cursor: pointer;
 }
 
-.promo-mentors .promo-mentors__controll:not(:last-child) {
+.promo-mentors__controll:not(:last-child) {
   margin-right: 20px;
 }
 
-.promo-mentors .promo-mentors__controll:first-child img {
+.promo-mentors__controll:first-child img {
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
-.promo-mentors .promo-mentors__controll.swiper-button-disabled {
+.promo-mentors__controll.swiper-button-disabled {
   opacity: 0.3;
 }
 
-.promo-mentors .promo-mentors__items {
+.promo-mentors__items {
   overflow-x: hidden;
   max-width: 1380px;
 }
 
-.promo-mentors .promo-mentors__item-top {
+.promo-mentors__item-top {
   padding: 30px;
   border-radius: 20px;
   background: #fff;
 }
 
-.promo-mentors .promo-mentors__item-tag {
+.promo-mentors__item-tag {
   padding: 8px 15px;
   border: 1px solid #E35800;
   border-radius: 20px;
@@ -5694,30 +5729,30 @@ html body .content section .ms-options-wrap ul li label:hover {
   margin-bottom: 20px;
 }
 
-.promo-mentors .promo-mentors__item-name {
+.promo-mentors__item-name {
   display: block;
 }
 
-.promo-mentors .promo-mentors__item-img {
+.promo-mentors__item-img {
   height: 325px;
   overflow: hidden;
   border-radius: 20px;
 }
 
-.promo-mentors .promo-mentors__item-img img {
+.promo-mentors__item-img img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.promo-mentors .promo-mentors__item-bottom {
+.promo-mentors__item-bottom {
   padding: 30px;
   border-radius: 20px;
   background: #fff;
 }
 
-.promo-mentors .promo-mentors__item-bottom p {
+.promo-mentors__item-bottom p {
   margin: 0;
 }
 
@@ -6201,7 +6236,28 @@ html body .content section .ms-options-wrap ul li label:hover {
   cursor: pointer;
 }
 
+.request .request__img {
+  display: none !important;
+}
+
+.travel-events__form .tours__item-body__btn {
+  max-width: 140px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.travel-events .travel-events__label {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 @media screen and (min-width: 945px) {
+  * {
+    min-width: 0;
+    min-height: 0;
+  }
+
   * {
     min-width: 0;
     min-height: 0;
@@ -7158,7 +7214,7 @@ html body .content section .ms-options-wrap ul li label:hover {
     white-space: nowrap;
   }
 
-  .reviews .reviews__items {
+  .reviews .reviews__items:not(.swiper-slider) {
     grid-template-columns: repeat(auto-fit, minmax(310px, 440px));
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -7166,6 +7222,26 @@ html body .content section .ms-options-wrap ul li label:hover {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  .reviews .reviews__items.swiper-slider .swiper-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .reviews .reviews__items.swiper-slider .reviews__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .reviews .reviews__items.swiper-slider .reviews__item {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .reviews__item {
@@ -8293,6 +8369,22 @@ html body .content section .ms-options-wrap ul li label:hover {
   .tour-title + .journal {
     padding-bottom: 0;
   }
+
+  .tours__item-img img.--desc {
+    display: none;
+  }
+
+  .tours__item-img img.--mid {
+    display: block;
+  }
+
+  .tour-title .tour-title__img.--desc {
+    display: none;
+  }
+
+  .tour-title .tour-title__img.--mid {
+    display: block;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -8415,6 +8507,22 @@ html body .content section .ms-options-wrap ul li label:hover {
   }
 
   .title .title__slide img.--mob {
+    display: block;
+  }
+
+  .tours__item-img img.--mid {
+    display: none;
+  }
+
+  .tours__item-img img.--mob {
+    display: block;
+  }
+
+  .tour-title .tour-title__img.--mid {
+    display: none;
+  }
+
+  .tour-title .tour-title__img.--mob {
     display: block;
   }
 }
