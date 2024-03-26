@@ -2383,6 +2383,7 @@ a.ui-button:active,
 .tours__item-body__cost {
   margin: 0;
   white-space: nowrap;
+  font-size: 23px !important;
 }
 
 .tours__item-body__btns {
