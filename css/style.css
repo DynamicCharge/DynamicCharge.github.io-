@@ -3537,7 +3537,7 @@ a.ui-button:active,
 }
 
 .program .program__item._active .program__item-text {
-  max-height: 1000px;
+  max-height: 10000px;
 }
 
 .program .program__item._active .program__btn {
@@ -5899,6 +5899,8 @@ html body .content section .ms-options-wrap ul li label:hover {
   font-weight: 700;
   line-height: 55px;
   letter-spacing: 0em;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .promo-show .promo-show__wrapper {
@@ -6332,7 +6334,8 @@ body {
 }
 
 .title .title__aside-item {
-  background: #94c3ab;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c2d7b2), to(#c2d7b2)), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0, #c5d9b5 100%);
+  background: linear-gradient(0deg, #c2d7b2, #c2d7b2), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0, #c5d9b5 100%);
 }
 
 .title__aside-item.--white-color {
@@ -6481,6 +6484,14 @@ a.--orange-color {
 
 .question.--transparent .question__header {
   color: #4a5043;
+}
+
+.advantages .advantages__decor {
+  display: none;
+}
+
+.question.--transparent {
+  border-color: #4E6540;
 }
 
 @media screen and (min-width: 945px) {
@@ -6713,7 +6724,8 @@ a.--orange-color {
   }
 
   .header {
-    background: var(--gradient, linear-gradient(87deg, #E35800 5.82%, #EC7A32 79.37%));
+    background: -webkit-gradient(linear, left bottom, left top, from(#C2D7B2), to(#C2D7B2)), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0%, #C5D9B5 100%);
+    background: linear-gradient(0deg, #C2D7B2, #C2D7B2), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0%, #C5D9B5 100%);
     padding: 14px 0;
     position: sticky;
     top: 0;
@@ -6794,7 +6806,8 @@ a.--orange-color {
     left: 0;
     width: 100%;
     z-index: 90;
-    background: var(--gradient, linear-gradient(87deg, #E35800 5.82%, #EC7A32 79.37%));
+    background: -webkit-gradient(linear, left bottom, left top, from(#C2D7B2), to(#C2D7B2)), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0%, #C5D9B5 100%);
+    background: linear-gradient(0deg, #C2D7B2, #C2D7B2), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0%, #C5D9B5 100%);
     padding-bottom: 52px;
     -webkit-transform: translateY(-200vh);
     -ms-transform: translateY(-200vh);
