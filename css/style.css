@@ -6494,6 +6494,10 @@ a.--orange-color {
   border-color: #4E6540;
 }
 
+.apq-decor {
+  display: none;
+}
+
 @media screen and (min-width: 945px) {
   * {
     min-width: 0;
