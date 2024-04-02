@@ -3730,7 +3730,7 @@ a.ui-button:active,
 }
 
 .question .question__wrapper {
-  max-width: 514px;
+  max-width: 554px;
   width: 100%;
   position: relative;
   z-index: 10;
@@ -6496,6 +6496,19 @@ a.--orange-color {
 
 .apq-decor {
   display: none;
+}
+
+.about-page .about-page__idea-header {
+  color: #4a5043;
+}
+
+.about-page .about-page__information-item,
+.about-page .about-page__advantages {
+  border-color: #4a5043;
+}
+
+.about-page .about-page__quality-title {
+  background: linear-gradient(86.78deg, #36482E 5.82%, #617C4E 79.37%);
 }
 
 @media screen and (min-width: 945px) {
