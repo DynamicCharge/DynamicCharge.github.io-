@@ -6498,17 +6498,38 @@ a.--orange-color {
   display: none;
 }
 
+.about-page__quality-item__name,
+.promo-how .promo-how__item-num,
+.promo-how__header,
+.promo-mentors__header,
+.promo-info .promo-info__header,
+.gift-title .gift-title__epilog-header,
+.request .request__header,
 .about-page .about-page__idea-header {
   color: #4a5043;
 }
 
+.promo-how .promo-how__item,
+.gift-title .gift-title__epilog-item,
+.projects__title.--transparent.--border,
 .about-page .about-page__information-item,
 .about-page .about-page__advantages {
   border-color: #4a5043;
 }
 
-.about-page .about-page__quality-title {
+.promo-info .promo-info__accent,
+.promo-form,
+.promo-how .promo-how__item.--gradient {
   background: linear-gradient(86.78deg, #36482E 5.82%, #617C4E 79.37%);
+}
+
+.projects__title.--transparent.--border .projects__title-bg {
+  display: none;
+}
+
+.about-page .about-page__quality-title {
+  background: -webkit-gradient(linear, left bottom, left top, from(#c2d7b2), to(#c2d7b2)), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0, #c5d9b5 100%);
+  background: linear-gradient(0deg, #c2d7b2, #c2d7b2), radial-gradient(110.78% 83.33% at 100% -14.16%, rgba(243, 250, 238, 0.6) 0, #c5d9b5 100%);
 }
 
 @media screen and (min-width: 945px) {
